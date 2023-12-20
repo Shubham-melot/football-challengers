@@ -2996,9 +2996,26 @@ th {
 }
 
 .leaderboard-tab-header {
+  background: url("../img/team stand and talent btn bg.png") center/ 100% 100%
+    no-repeat;
   display: flex;
   justify-content: center;
-  align-items: center;
-  max-width: 70%;
-  outline: 1px solid red;
+  margin-inline: auto;
+  align-items: stretch;
+  max-width: 60%;
+  gap: 1em;
+  min-height: 12vw;
+}
+.leaderboard-btn {
+  width: 90%;
+  height: 100%;
+  transform: scale(1.3);
+}
+.leaderboard-btn img {
+  opacity: 0;
+  width: 100%;
+  margin: 0;
+}
+.leaderboard-btn.active-league img {
+  opacity: 1;
 }
