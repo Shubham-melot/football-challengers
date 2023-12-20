@@ -715,12 +715,11 @@ and open the template in the editor.
               Beans pot will be rewarded to <br />
               <span>Top 3 users</span> of Daily Bonus Leaderboard.
             </div>
+            <div class="bean-text" id="potoveralltxt" style="display: none">
+              <span>Top 3 contributors</span> from <span>Top 2 teams</span> will
+              receive the rewards.
+            </div>
           </div>
-
-          <!-- <div class="bean-text" id="potoveralltxt" style="display: none">
-            <span>Top 3 contributors</span> from <span>Top 2 teams</span> will
-            receive the rewards.
-          </div> -->
         </div>
       </div>
       <button class="btn-how-to" onclick="openRewards()" id="btn-how-to2">
@@ -739,23 +738,23 @@ and open the template in the editor.
         />
       </center>
       <div id="overallRanking" style="display: none" class="main-leaderboard">
-        <div class="col-two">
+        <div class="leaderboard-tab-header">
           <div>
             <button
               id="btn-league-rec"
               onclick="rankingLeague(event,1)"
-              class="btn-league active-league"
+              class="btn-league active-league leaderboard-btn"
             >
-              <img src="img/team.png" />
+              <img src="img/team stand btn.png" />
             </button>
           </div>
           <div>
             <button
-              class="btn-league"
+              class="btn-league leaderboard-btn"
               id="btn-overall-rec"
               onclick="rankingLeague(event,2)"
             >
-              <img src="img/teamstand.png" />
+              <img src="img/talent bg.png" />
             </button>
           </div>
         </div>
@@ -831,7 +830,37 @@ and open the template in the editor.
             </div>
           </div>
           <div class="leaderboard" id="leagueRecWeekly">
-            <table class="table-rec" id="leagueRecTableWeekly"></table>
+            <table class="table-rec" id="moh">
+              <tr class="leader-strip-bg talent-strip">
+                <td class="col-1 team-avatar">
+                  <img
+                    src="/img/Teams/Small icon/Blue Sharks small icon.png"
+                    alt=""
+                  />
+                </td>
+                <td class="col-2 talent-name">Talent Name</td>
+                <td class="top-3-talents">
+                  <img
+                    class="top-container"
+                    src="img/Silver frame.png"
+                    alt=""
+                  />
+                  <img class="top-container" src="img/gold frame.png" alt="" />
+                  <img
+                    class="top-container"
+                    src="img/bronze frame.png"
+                    alt=""
+                  />
+                </td>
+                <td class="talent-score-text">
+                  <img class="score-img" src="img/score.png" alt="" />
+                  <div style="display: flex">
+                    <span class="team-points">xxx</span>
+                    <span>&nbsp;Points</span>
+                  </div>
+                </td>
+              </tr>
+            </table>
           </div>
           <!-- talent ranking -->
           <div class="leaderboard" id="talentRecWeekly" style="display: none">

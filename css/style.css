@@ -1975,7 +1975,7 @@ ul {
   grid-template-columns: 15.3% 27.3% 17.3% 25.33%;
   text-align: center;
   justify-content: center;
-  background: url("../img/Leaderboard-strip.png");
+  background: url("../img/Leaderboard strip.png");
   height: 13vw;
   /* width: 59vw; */
   padding-top: 1vw;
@@ -2007,11 +2007,11 @@ ul {
 
 .main-leaderboard {
   background: url("../img/Leaderboard bg.png") center/100% 100% no-repeat;
-  padding: 11vw 0 0vw;
+  padding: 11vw 0 10vw;
   margin-top: -10vw; /*background: #1d446b;*/
   margin: auto;
   width: 91%; /*border-radius: 2vw;border: 2px solid #4fcde6;*/
-  padding-bottom: 1vw;
+  /* padding-bottom: 1vw; */
   min-height: 40vh;
 }
 
@@ -2697,7 +2697,7 @@ a {
 .leader-strip-bg {
   margin: 0vw auto;
   width: 100%;
-  background-image: url(../img/Leaderboard-strip.png);
+  background-image: url("../img/Leaderboard strip.png");
   background-size: 100% 100%;
   background-position: center;
   display: grid;
@@ -2738,7 +2738,7 @@ a {
 .silver-bg {
   margin: 1vw auto;
   width: 100%;
-  background-image: url(../img/frame2.png);
+  background-image: url("../img/Silver frame.png");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -2754,7 +2754,7 @@ a {
 .gold-bg {
   margin: 0vw auto;
   width: 100%;
-  background-image: url(../img/frame1.png);
+  background-image: url("../img/gold frame.png");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -2768,7 +2768,7 @@ a {
 .bronze-bg {
   margin: 1vw auto;
   width: 100%;
-  background-image: url(../img/frame3.png);
+  background-image: url("../img/bronze frame.png");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -3007,6 +3007,7 @@ th {
   max-width: 60%;
   gap: 1em;
   min-height: 12vw;
+  margin-bottom: 0.5em;
 }
 .leaderboard-btn {
   width: 90%;
@@ -3020,4 +3021,42 @@ th {
 }
 .leaderboard-btn.active-league img {
   opacity: 1;
+}
+.top-3-talents {
+  display: flex;
+  align-items: center;
+}
+.top-container {
+  max-width: 28px;
+  aspect-ratio: 1/1;
+}
+.top-container:first-child {
+  margin-right: -8px;
+}
+.top-container:last-child {
+  margin-left: -8px;
+}
+.score-img {
+  max-width: 16px;
+  aspect-ratio: 1/1;
+}
+.talent-score-text {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.talent-name {
+  width: 100% !important;
+  margin-top: 0;
+  color: white !important;
+}
+.team-avatar {
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: 32px;
+  margin-block: 0;
+}
+.talent-strip {
+  padding-block: 2vw 4vw !important;
+  align-items: center;
 }

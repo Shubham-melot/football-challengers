@@ -1231,21 +1231,21 @@ function teamRankPopulate(teamRankRec) {
         var teamName = "";
 
         if (teamPortraitIndex == 1) {
-          teamName = "Team warrior";
+          teamName = "Devil Defenders";
         } else if (teamPortraitIndex == 2) {
-          teamName = "Divine soldiers";
+          teamName = "Brave Blues";
         } else if (teamPortraitIndex == 3) {
-          teamName = " Striking Shadow";
+          teamName = "Golden Panthers";
         } else if (teamPortraitIndex == 4) {
-          teamName = "Galaxy Fighters";
+          teamName = "Real Rebels";
         } else if (teamPortraitIndex == 5) {
-          teamName = "United Enigma";
+          teamName = "Fiery Eagles";
         } else if (teamPortraitIndex == 6) {
-          teamName = "The turf's giants";
+          teamName = "Blue Sharks";
         } else if (teamPortraitIndex == 7) {
-          teamName = "Defender's Dream";
+          teamName = "Thundering Wizards";
         } else if (teamPortraitIndex == 8) {
-          teamName = "Barrier Breakers";
+          teamName = "Fierce Fighters";
         }
 
         var rec = "";
@@ -1349,6 +1349,7 @@ function getTeamRankWeekly(local) {
       },
     });
   } else {
+    console.log(teamRankRecWeekly);
     teamRankPopulateWeekly(teamRankRecWeekly);
   }
 }
