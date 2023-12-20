@@ -749,6 +749,7 @@ body {
   /* padding: 12vw 0 0vw; */
   height: 44vh;
   margin-top: -26vw;
+  pointer-events: none;
 }
 .bean-pot-img {
   width: 55vw;
@@ -2073,6 +2074,7 @@ ul {
   width: 100%;
   text-align: left; /*background: rgb(26 21 27 / 76%);*/
   margin: 0vw 0 2vw;
+  margin-top: 6vw;
 }
 
 .team-text {
