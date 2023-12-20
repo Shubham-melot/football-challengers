@@ -1,0 +1,1791 @@
+<!DOCTYPE >
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+  <head>
+    <title>Football Challengers</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta http-equiv="Cache" content="no-cache" />
+    <meta itemprop="name" content="Football Glory" />
+    <meta property="og:title" content="Football Glory" />
+    <meta
+      property="og:description"
+      content="Football Challengers! Play Football to win even more rewards"
+    />
+    <meta
+      property="og:image"
+      content="http://www.streamkarlive.live/streamkar/footballGlory082k23/img/header.jpg"
+    />
+    <meta
+      property="og:url"
+      content="http://www.streamkarlive.live/streamkar/footballGlory082k23/index.html"
+    />
+    <meta property="fb:app_id" content="475289669332579" />
+    <meta name="twitter:title" content="Football Challengers" />
+    <meta
+      name="twitter:description"
+      content="Football Challengers! Play Football to win even more rewards"
+    />
+    <meta
+      name="twitter:image:src"
+      content="http://www.streamkarlive.live//streamkar/footballGlory082k23/img/header.jpg"
+    />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link
+      href="./../common/css/common.css?v=20"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="css/sweet.css" />
+    <script type="text/javascript" src="../host.js?v=4"></script>
+    <script type="text/javascript" src="js/marquee.js"></script>
+    <script type="text/javascript" src="js/jquery.3.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.syotimer.min.js"></script>
+    <script type="text/javascript" src="js/event.js"></script>
+    <script type="text/javascript" src="js/sweetalert.js"></script>
+    <script type="text/javascript" src="js/alert.js"></script>
+
+    <script
+      type="text/javascript"
+      src="./../common/js/native_api.js?v=5"
+    ></script>
+    <script type="text/javascript" src="./../common/js/common.js?v=3"></script>
+  </head>
+
+  <body id="overlay">
+    <div class="main-body">
+      <!-- Language Selection -->
+      <button class="lngSelectmain" id="lngmainbtn">
+        <div class="colTwo3">
+          <div>
+            <div class="lngSelect" id="lngtxt"><span>English</span></div>
+          </div>
+          <div>
+            <div class="arrowContainer">
+              <i class="arrow"></i>
+            </div>
+          </div>
+        </div>
+      </button>
+      <div class="langs" style="display: none">
+        <div><button data-id="1">English</button></div>
+        <div><button data-id="2">Hindi/urdu</button></div>
+      </div>
+      <header>
+        <img class="header-img" src="/img/Header.png" alt="header" />
+      </header>
+      <!--   <div class="lang-select">
+      <select onchange="contentNext(this.value);"   id="mov_type" name="mov_type"  class="selection-option">
+        <option value="1">English</option>
+      <option value="2">Urdu/Hinglish</option>
+      </select>
+    </div> -->
+
+      <div class="head-section">
+        <input type="hidden" name="" id="weeklyIndex" value="" />
+
+        <!-- <img src="img/Header.png" class="header-img"> -->
+        <!-- <button class="guide-btn" onclick="openHowTo()"><img src="img/guide.png" ></button> -->
+        <div id="contentDiv"></div>
+        <div class="wrapper">
+          <div class="vote-text-1">MY POINTS: <span id="voteText">0</span></div>
+          <!-- <img src="img/voteHead.png" class="vote-head"> -->
+          <div
+            id="jssor_1"
+            class="slider-bg"
+            style="
+              position: relative;
+              margin: 0 auto;
+              top: 0px;
+              left: 0px;
+              width: 980px;
+              height: 480px;
+              overflow: hidden;
+              visibility: hidden;
+            "
+          >
+            <!-- Loading Screen -->
+            <div
+              data-u="loading"
+              class="jssorl-009-spin"
+              style="
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                background-color: rgba(0, 0, 0, 0.7);
+              "
+            >
+              <img
+                style="
+                  margin-top: -19px;
+                  position: relative;
+                  top: 50%;
+                  width: 38px;
+                  height: 38px;
+                "
+                src="img/spin.svg"
+              />
+            </div>
+            <div
+              data-u="slides"
+              style="
+                cursor: default;
+                position: relative;
+                top: 150px;
+                left: 0px;
+                width: 980px;
+                height: 250px;
+                margin-right: 1vw !important;
+                overflow: hidden;
+              "
+            >
+              <div>
+                <img
+                  data-u="image"
+                  src="img/team/2.png"
+                  class="team-select"
+                  onclick="teamSelection(2)"
+                  id="team2"
+                />
+              </div>
+              <div>
+                <img
+                  data-u="image"
+                  src="img/team/6.png"
+                  class="team-select"
+                  onclick="teamSelection(6)"
+                  id="team6"
+                />
+              </div>
+              <div>
+                <img
+                  data-u="image"
+                  src="img/team/3.png"
+                  class="team-select"
+                  onclick="teamSelection(3)"
+                  id="team3"
+                />
+              </div>
+              <div>
+                <img
+                  data-u="image"
+                  src="img/team/1.png"
+                  class="team-select"
+                  onclick="teamSelection(1)"
+                  id="team1"
+                />
+              </div>
+              <div>
+                <img
+                  data-u="image"
+                  src="img/team/8.png"
+                  class="team-select"
+                  onclick="teamSelection(8)"
+                  id="team8"
+                />
+              </div>
+              <div>
+                <img
+                  data-u="image"
+                  src="img/team/7.png"
+                  class="team-select"
+                  onclick="teamSelection(7)"
+                  id="team7"
+                />
+              </div>
+              <div>
+                <img
+                  data-u="image"
+                  src="img/team/5.png"
+                  class="team-select"
+                  onclick="teamSelection(5)"
+                  id="team5"
+                />
+              </div>
+              <div>
+                <img
+                  data-u="image"
+                  src="img/team/4.png"
+                  class="team-select"
+                  onclick="teamSelection(4)"
+                  id="team4"
+                />
+              </div>
+              <!--   <div>
+                <img data-u="image" src="img/team/9.png" class="team-select" onclick="teamSelection(9)" id="team9"/>
+                    
+            </div>
+              <div>
+                <img data-u="image" src="img/team/10.png" class="team-select" onclick="teamSelection(10)" id="team10"/>
+                    </div>  -->
+            </div>
+            <a data-scale="0" style="display: none; position: absolute"></a>
+            <!-- Bullet Navigator -->
+            <div
+              data-u="navigator"
+              class="jssorb051"
+              style="position: absolute; bottom: 16px; right: 16px"
+              data-autocenter="1"
+              data-scale="0.5"
+              data-scale-bottom="0.75"
+            >
+              <div
+                data-u="prototype"
+                class="i"
+                style="width: 12px; height: 12px"
+              >
+                <svg
+                  viewbox="0 0 16000 16000"
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                  "
+                >
+                  <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+                </svg>
+              </div>
+            </div>
+            <!-- Arrow Navigator -->
+            <div
+              data-u="arrowleft"
+              class="jssora051 arrowleft"
+              style="width: 65px; height: 65px; top: 0px; left: 35px"
+              data-autocenter="2"
+              data-scale="0.75"
+              data-scale-left="0.75"
+            >
+              <img src="/img/Left-arrow.png" style="width: 100%" alt="" />
+            </div>
+            <div
+              data-u="arrowright"
+              class="jssora051 arrowright"
+              style="width: 65px; height: 65px; top: 0px; right: 35px"
+              data-autocenter="2"
+              data-scale="0.75"
+              data-scale-right="0.75"
+            >
+              <img src="img/Right arrow.png" style="width: 100%" alt="" />
+            </div>
+          </div>
+          <input type="hidden" name="" id="teamSelectionVal" />
+          <div class="game-vote-buttons">
+            <p class="vote-text">
+              <input
+                type="number"
+                name=""
+                min="1"
+                class="vote-field"
+                id="noVoteText"
+                oninput="this.value=(parseInt(this.value)||0)"
+                placeholder="Type vote here"
+                onkeyup="stringlength(4,6)"
+                style="width: 100%; border: none; outline: none"
+              />
+            </p>
+            <button
+              class="btn-vote-main"
+              onclick="teamVote(0)"
+              id="btnVoteMain"
+            >
+              <!--<img src="img/voteBtn.png" style="width: 90%; margin-top: -1vw;" >-->
+            </button>
+            <div style="clear: both"></div>
+            <div>
+              <!--<div class="container">
+          <img src="img/Count-down-strip.png" alt="" class="date">
+          <div id="countdown">
+            <ul>
+              <li><span id="days"></span>days</li>
+              <li><span id="hours"></span>Hours</li>
+              <li><span id="minutes"></span>Minutes</li>
+              <li><span id="seconds"></span>Seconds</li>
+            </ul>
+        </div>-->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <marquee
+        behavior="scroll"
+        direction="left"
+        scrollamount="7"
+        class="marquee w100"
+        id="topmarq"
+      >
+      </marquee>
+      <div class="topCon">
+        <section>
+          <div id="num" class="outertimerdiv">
+            <div id="timers" class="main-timer-div">
+              <div id="simple_timer" class="syotimer timer">
+                <div class="timer-body-block">
+                  <div class="table-cell day">
+                    <div class="tab-val" id="timer_days">00</div>
+                    <div class="tab-metr tab-unit day-pad" id="timer_days_text">
+                      Days
+                    </div>
+                  </div>
+                  <div class="table-cell hour">
+                    <div class="tab-val" id="timer_hours">00</div>
+                    <div
+                      class="tab-metr tab-unit hour-pad"
+                      id="timer_hours_text"
+                    >
+                      Hours
+                    </div>
+                  </div>
+                  <div class="table-cell minute">
+                    <div class="tab-val" id="timer_mints">00</div>
+                    <div
+                      class="tab-metr tab-unit min-pad"
+                      id="timer_mints_text"
+                    >
+                      Minutes
+                    </div>
+                  </div>
+                  <div class="table-cell second">
+                    <div class="tab-val" style="opacity: 1" id="timer_secs">
+                      00
+                    </div>
+                    <div class="tab-metr tab-unit sec-pad" id="timer_secs_text">
+                      Seconds
+                    </div>
+                  </div>
+                </div>
+                <div class="timer-foot-block"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <a id="backtotopbtn" class="btn-to-top">&#136;</a>
+
+      <!-- data container start -->
+      <!--<img src="img/giftHead.png" class="head-ribbon">-->
+
+      <!--<center><h2 class="winnerhead">GIFTS OF THE EVENT</h2></center>-->
+
+      <div class="gifts-div">
+        <center class="winnerhead">
+          <img src="img/Event gift tag.png" alt="" />
+        </center>
+        <div class="col-three">
+          <div>
+            <img src="img/balleballe.png" class="gift-img" />
+            <!-- <p class="gift-name">Balle Balle</p> -->
+            <p class="coin-text">
+              <img src="img/coin.png" class="icon-10" /> 200
+            </p>
+          </div>
+          <div>
+            <img src="img/youarethebest.png" class="gift-img" />
+            <!-- <p class="gift-name">You're the best!</p> -->
+            <p class="coin-text">
+              <img src="img/coin.png" class="icon-10" /> 8000
+            </p>
+          </div>
+          <div>
+            <img src="img/celebration.png" class="gift-img" />
+            <!-- <p class="gift-name">Celebrations</p> -->
+            <p class="coin-text">
+              <img src="img/coin.png" class="icon-10" /> 50K
+            </p>
+          </div>
+        </div>
+      </div>
+      <button class="how-to-btn" onclick="openHowTo()" id="htBtn">
+        <img src="img/How to play btn.png" class="btn-img" />
+      </button>
+
+      <div class="lucky-draw" id="luckyDrawView">
+        <div class="luckygame-bg">
+          <!--     <div  class="lucky-top"><img src="img/Lucky-draw-tag.png"></div> -->
+          <div class="bg-chance1">
+            <!--<div class="col-two my-chance-text">-->
+
+            <!--    <img src="img/My-chance-Strip.png"> -->
+
+            <!--  <div><button class="btn-reward" onclick="openMyRewardsDialog()"><img src="img/gameInfo.png"></button></div> -->
+          </div>
+
+          <img
+            src="img/game/0.gif"
+            class="game-gif"
+            alt=""
+            id="luckyGifStart"
+            style="display: none"
+          />
+          <img
+            src="img/game/7.gif"
+            class="game-gif"
+            alt=""
+            id="luckyGif0"
+            style="display: none"
+          />
+          <img
+            src="img/game/1.gif"
+            class="game-gif"
+            alt=""
+            id="luckyGif1"
+            style="display: none"
+          />
+          <img
+            src="img/game/2.gif"
+            class="game-gif"
+            alt=""
+            id="luckyGif2"
+            style="display: none"
+          />
+          <img
+            src="img/game/3.gif"
+            class="game-gif"
+            alt=""
+            id="luckyGif3"
+            style="display: none"
+          />
+          <img
+            src="img/game/4.gif"
+            class="game-gif"
+            alt=""
+            id="luckyGif4"
+            style="display: none"
+          />
+          <img
+            src="img/game/5.gif"
+            class="game-gif"
+            alt=""
+            id="luckyGif5"
+            style="display: none"
+          />
+          <img
+            src="img/game/6.gif"
+            class="game-gif"
+            alt=""
+            id="luckyGif6"
+            style="display: none"
+          />
+          <img
+            src="img/game/7.gif"
+            class="game-gif"
+            alt=""
+            id="luckyGif7"
+            style="display: none"
+          />
+
+          <img
+            src="img/game/luckyimg.png"
+            class="game-gif"
+            alt=""
+            id="luckyImg"
+          />
+
+          <div class="wid-80 beansam">
+            <img src="img/25kbeans.png" class="" />
+          </div>
+
+          <button class="lucky-play" onclick="getLuckyPlay(0)" id="playImg">
+            <img src="img/shoot.gif" style="width: 100%" />
+          </button>
+          <div class="chance-div">
+            <span>Enter Chance: </span
+            ><input
+              class="chance-input"
+              type="number"
+              min="1"
+              max="99"
+              id="myGameChances"
+              onkeyup="stringlengthUser(this.value,'')"
+              oninput="this.value=(parseInt(this.value)||0)"
+              title="Numbers only"
+              value="1"
+            />
+          </div>
+
+          <!--   <div class="btn-lucky">
+          <input type="hidden" name="" id="chanceTextValue" value="1">
+          <figure class="btn-lucky-bg btn-lucky-bg-active" id="chanceText-1" onclick="noChanceSelect(1)">
+            <img src="img/btnChance.png" class="btn-lucky-bg-img">
+            <figcaption class="btn-lucky-caption">1</figcaption>
+          </figure>
+          <figure class="btn-lucky-bg" onclick="noChanceSelect(10)" id="chanceText-10">
+            <img src="img/btnChance.png" class="btn-lucky-bg-img">
+            <figcaption class="btn-lucky-caption">10</figcaption>
+          </figure>
+          <figure class="btn-lucky-bg" onclick="noChanceSelect(99)" id="chanceText-100">
+            <img src="img/btnChance.png" class="btn-lucky-bg-img">
+            <figcaption class="btn-lucky-caption">99</figcaption>
+          </figure>
+          <div style="clear:both;"></div>
+        </div> -->
+        </div>
+        <div class="chance-text">
+          Kick Left: <span id="chanceText">00</span>
+        </div>
+
+        <!-- <img src="img/Game-Machine-png.png"   id="luckyImg">
+        <img src="img/game/LuckyDraw gif.gif"  id="luckyGif" style="display: none;">-->
+      </div>
+      <div class="superFan">
+        <img
+          src="img/winners of the week text.png"
+          class="winner-head"
+          alt=""
+        />
+        <img
+          src="img/info.png"
+          class="btn-info"
+          id="superFant"
+          onclick="openSuperFan()"
+        />
+        <!--<center><h2 class="winnerhead">WINNER OF THE WEEK</h2></center>-->
+        <!--<center><img src="img/superFan.png" class="super-fan"></center>-->
+        <div class="rotating_wheel">
+          <div class="wheel_contain">
+            <div class="wheel-bg">
+              <img src="img/wheelfinal.png" class="wheel" />
+              <!-- <img src="img/user.png" class="center_img" id="userTop11"> -->
+              <img src="img/whitecircle.png" class="wheel_img1" id="teamTop1" />
+
+              <img src="img/whitecircle.png" class="wheel_img2" id="teamTop2" />
+
+              <img src="img/whitecircle.png" class="wheel_img5" id="teamTop5" />
+
+              <img src="img/whitecircle.png" class="wheel_img6" id="teamTop6" />
+
+              <img
+                src="img/whitecircle.png"
+                class="outer_img5"
+                id="userTop5"
+                onerror="imgError(this)"
+              />
+              <img
+                src="img/whitecircle.png"
+                class="outer_img6"
+                id="userTop6"
+                onerror="imgError(this)"
+              />
+
+              <img
+                src="img/whitecircle.png"
+                class="outer_img1"
+                id="userTop1"
+                onerror="imgError(this)"
+              />
+
+              <!--   <img src="../common/img/kk_head_avatar_men.png" class="outer_img9" id="userTop9" onerror="imgError(this)">
+            <img src="../common/img/kk_head_avatar_men.png" class="outer_img10" id="userTop10" onerror="imgError(this)"> -->
+
+              <img
+                src="img/whitecircle.png"
+                class="outer_img2"
+                id="userTop2"
+                onerror="imgError(this)"
+              />
+
+              <img src="img/whitecircle.png" class="wheel_img7" id="teamTop7" />
+              <img
+                src="img/whitecircle.png"
+                class="outer_img7"
+                id="userTop7"
+                onerror="imgError(this)"
+              />
+              <img
+                src="img/whitecircle.png"
+                class="outer_img4"
+                id="userTop4"
+                onerror="imgError(this)"
+              />
+              <img src="img/whitecircle.png" class="wheel_img4" id="teamTop4" />
+
+              <img
+                src="img/whitecircle.png"
+                class="outer_img3"
+                id="userTop3"
+                onerror="imgError(this)"
+              />
+
+              <img
+                src="img/whitecircle.png"
+                class="outer_img8"
+                id="userTop8"
+                onerror="imgError(this)"
+              />
+
+              <img src="img/whitecircle.png" class="wheel_img3" id="teamTop3" />
+              <img src="img/whitecircle.png" class="wheel_img8" id="teamTop8" />
+              <!--    <img src="../common/img/kk_head_avatar_men.png" class="wheel_img9" id="teamTop9">
+           <img src="../common/img/kk_head_avatar_men.png" class="wheel_img10" id="teamTop10"> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <a  href="instagram://user?username=gupta_balram"> Go to Insta page for testing</a -->
+
+      <!--<center><h2 class="luckyhead">LUCKY DRAW</h2></center>-->
+
+      <!--<div class="btn-lucky">
+      <input type="hidden" name="" id="chanceTextValue" value="1">
+      <figure class="btn-lucky-bg btn-lucky-bg-active" id="chanceText-1" onclick="noChanceSelect(1)">
+        <img src="img/btnChance.png" class="btn-lucky-bg-img">
+        <figcaption class="btn-lucky-caption">1</figcaption>
+      </figure>
+      <figure class="btn-lucky-bg" onclick="noChanceSelect(10)" id="chanceText-10">
+        <img src="img/btnChance.png" class="btn-lucky-bg-img">
+        <figcaption class="btn-lucky-caption">10</figcaption>
+      </figure>
+      <figure class="btn-lucky-bg" onclick="noChanceSelect(100)" id="chanceText-100">
+        <img src="img/btnChance.png" class="btn-lucky-bg-img">
+        <figcaption class="btn-lucky-caption">100</figcaption>
+      </figure>
+      <button class="lucky-play" onclick="getLuckyPlay(0)" id="playImg"><img src="img/play.gif" style="width: 100%;"></button>
+      <div style="clear:both;"></div>
+    </div>-->
+      <!-- <button class="btn-how-to" onclick="openHowTo()"><img src="img/howTo.png" style="width: 100%;"></button> -->
+      <div class="bg-league col-two">
+        <div>
+          <button
+            id="btn-super"
+            onclick="leagueChange(event,1)"
+            class="btn-league active-league"
+          >
+            <img src="img/weekly btn.png" />
+          </button>
+        </div>
+        <div>
+          <button
+            class="btn-league"
+            id="btn-overall"
+            onclick="leagueChange(event,2)"
+            disabled
+          >
+            <img src="img/Overall btn.png" />
+          </button>
+        </div>
+      </div>
+
+      <div class="beanspotTag"><img src="img/Beans pot tag.png" /></div>
+
+      <div class="bean-pot">
+        <!--<div  class="lucky-top"><img src="img/Bean-Ammount-tag.png"></div>-->
+        <!--<h2 class="bean-text"><img src="img/Beans-pot-tag.png" class="bean-pot-text-img" alt=""></h2>-->
+
+        <div>
+          <div style="height: 50vh; position: relative; top: 8vw">
+            <img class="bean-pot-img" src="img/Beans pot.png" alt="" />
+            <!--<h2 class="bean-text"><img src="img/Beans-pot-tag.png" class="bean-pot-text-img" alt=""></h2>-->
+            <figure class="bean-pot-text" id="potFan">
+              <img src="img/Bean-Ammount-tag.png" class="pot-text-img" />
+              <figcaption class="pot-caption" id="potWeeklyValue">
+                0,00,000
+              </figcaption>
+              <div
+                class="pot-caption"
+                id="potWeeklyValuePrevious"
+                style="display: none"
+              >
+                0,00,000
+              </div>
+            </figure>
+            <figure class="bean-pot-text" id="potOverall" style="display: none">
+              <img src="img/Bean-Ammount-tag.png" class="pot-text-img" />
+              <figcaption class="pot-caption" id="potOverallValue">
+                00,000
+              </figcaption>
+            </figure>
+            <div class="bean-text" id="potweeklytxt">
+              Beans pot will be rewarded to <br />
+              <span>Top 3 users</span> of Daily Bonus Leaderboard.
+            </div>
+          </div>
+
+          <!-- <div class="bean-text" id="potoveralltxt" style="display: none">
+            <span>Top 3 contributors</span> from <span>Top 2 teams</span> will
+            receive the rewards.
+          </div> -->
+        </div>
+      </div>
+      <button class="btn-how-to" onclick="openRewards()" id="btn-how-to2">
+        <img src="img/Rewards btn.png" style="width: 100%" />
+      </button>
+      <!-- ranking -->
+      <!--<div class="bg-chance wid-40" id="leaderboardHead">
+      Weekly Ranking
+    </div>-->
+      <!--<center><h2 class="lead-head">LEADERBOARD</h2> </center>-->
+      <center>
+        <img
+          src="img/Leaderboard tag.png"
+          class="head-ribbon-new"
+          style="margin-bottom: -8vw !important; width: 60%"
+        />
+      </center>
+      <div id="overallRanking" style="display: none" class="main-leaderboard">
+        <div class="col-two">
+          <div>
+            <button
+              id="btn-league-rec"
+              onclick="rankingLeague(event,1)"
+              class="btn-league active-league"
+            >
+              <img src="img/team.png" />
+            </button>
+          </div>
+          <div>
+            <button
+              class="btn-league"
+              id="btn-overall-rec"
+              onclick="rankingLeague(event,2)"
+            >
+              <img src="img/teamstand.png" />
+            </button>
+          </div>
+        </div>
+        <div class="leaderboard" id="leagueRec">
+          <div class="table-rec" id="leagueRecTable"></div>
+        </div>
+        <!-- talent ranking -->
+        <div class="leaderboard" id="talentRec" style="display: none">
+          <div class="table-rec-talent" id="talentRecTable"></div>
+          <div
+            class="table-rec-talent"
+            id="talentRecTableMore"
+            style="display: none"
+          ></div>
+          <button
+            id="seemoreOverall"
+            onclick="weeklySeemore(3);"
+            style="display: none"
+            class="moreWeekly"
+          >
+            See More
+          </button>
+          <button
+            id="seeLessOverall"
+            onclick="weeklySeemore(4);"
+            style="display: none"
+            class="moreWeekly"
+          >
+            See Less
+          </button>
+        </div>
+      </div>
+      <div id="weeklyRanking" class="main-leaderboard">
+        <!--         <div class="col-two">
+          <div>
+            <button
+              id="btn-league-rec-this"
+              class="thisweek active"
+              onclick="rankingLeagueWeekRank(3)"
+            >
+              This week
+            </button>
+          </div>
+          <div>
+            <button
+              id="btn-league-rec-pre"
+              class="thisweek"
+              onclick="rankingLeagueWeekRank(4)"
+            >
+              Last week
+            </button>
+          </div>
+        </div> -->
+        <div id="talentRecWeeklyThis">
+          <div class="leaderboard-tab-header">
+            <div>
+              <button
+                id="btn-league-rec-1"
+                onclick="rankingLeague1(event,1)"
+                class="btn-league active-league leaderboard-btn"
+              >
+                <img src="img/team stand btn.png" />
+              </button>
+            </div>
+            <div>
+              <button
+                class="btn-league leaderboard-btn"
+                id="btn-overall-rec-1"
+                onclick="rankingLeague1(event,2)"
+              >
+                <img src="img/talent bg.png" />
+              </button>
+            </div>
+          </div>
+          <div class="leaderboard" id="leagueRecWeekly">
+            <table class="table-rec" id="leagueRecTableWeekly"></table>
+          </div>
+          <!-- talent ranking -->
+          <div class="leaderboard" id="talentRecWeekly" style="display: none">
+            <div class="table-rec-talent" id="talentRecTableWeekly"></div>
+
+            <div
+              class="table-rec-talent"
+              id="talentRecTableWeeklyMore"
+              style="display: none"
+            ></div>
+            <button
+              id="seemoreWeekly"
+              onclick="weeklySeemore(1);"
+              style="display: none"
+              class="moreWeekly"
+            >
+              See More
+            </button>
+            <button
+              id="seeLessWeekly"
+              onclick="weeklySeemore(2);"
+              style="display: none"
+              class="moreWeekly"
+            >
+              See Less
+            </button>
+          </div>
+        </div>
+
+        <div id="leagueRecWeeklyPrev" style="display: none">
+          <div class="col-two">
+            <div>
+              <button
+                id="btn-league-rec-previous"
+                onclick="rankingLeaguePrev(1)"
+                class="btn-league active-league"
+              >
+                <img src="img/team.png" />
+              </button>
+            </div>
+            <div>
+              <button
+                class="btn-league"
+                id="btn-overall-rec-previous"
+                onclick="rankingLeaguePrev(2)"
+              >
+                <img src="img/teamstand.png" />
+              </button>
+            </div>
+          </div>
+
+          <div class="leaderboard" id="leagueRecWeeklyPreviousData">
+            <table class="table-rec" id="leagueRecTableWeeklyPre"></table>
+          </div>
+          <!-- talent ranking -->
+          <div
+            class="leaderboard"
+            id="talentRecWeeklyPreviousData"
+            style="display: none"
+          >
+            <div
+              class="table-rec-talent"
+              id="talentRecTableWeeklyPrevious"
+            ></div>
+
+            <div
+              class="table-rec-talent"
+              id="talentRecTableWeeklyPreviousMore"
+              style="display: none"
+            ></div>
+            <!--   <button id="seemoreWeekly" onclick="weeklySeemore(1);" style="display:none;" class="moreWeekly">See More</button>
+           <button id="seeLessWeekly" onclick="weeklySeemore(2);" style="display:none;" class="moreWeekly">See Less</button -->>
+          </div>
+        </div>
+      </div>
+
+      <!-- data container end -->
+      <!-- Modal boxes start -->
+      <!-- user rank modal  -->
+      <div id="userRankModal" class="modal" style="display: none">
+        <!-- Modal content -->
+        <div class="close" id="closeuserRankModal">
+          <img src="img/close.png" class="close_dialog_next2" alt="" />
+        </div>
+        <div style="clear: both"></div>
+        <div class="modal-content-user">
+          <div><img id="userRankFlag" class="user-rank-flag" /></div>
+          <div class="" id="userRecTa">
+            <div
+              class="table-rec-talent"
+              id="userRecTable"
+              style="background: transparent !important"
+            ></div>
+            <div
+              class="table-rec-talent"
+              id="userRecTable1"
+              style="
+                display: none;
+                background: transparent !important;
+                margin: -1vw auto 0;
+              "
+            ></div>
+            <button
+              id="seeMoreUser"
+              class="see-more-btn"
+              onclick="seeMoreUser(1)"
+              style="display: none"
+            >
+              See More
+            </button>
+            <button
+              id="seeLessUser"
+              class="see-more-btn"
+              onclick="seeMoreUser(2)"
+              style="display: none"
+            >
+              See Less
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- my rewards modal box  -->
+      <div id="myRewardsDialog" class="modal" style="display: none">
+        <!-- Modal content -->
+        <div class="close" id="closemyRewardsDialog">
+          <img src="img/close.png" class="close_dialog_next2" alt="" />
+        </div>
+        <div style="clear: both"></div>
+        <div class="modal-content-how">
+          <center>
+            <img src="img/my-rewards-text.png" class="myrewardshead" />
+          </center>
+          <!--<center><h2 class="myrewardshead">MY REWARDS</h2></center>-->
+          <div class="how-to-content-fan" id="myRewards"></div>
+        </div>
+      </div>
+      <!-- super fan dialog -->
+      <div id="superFanDialog" class="modal" style="display: none">
+        <!-- Modal content -->
+        <!--<div class="closetop" id="closesuperFanDialog"><img src="img/close.png" class="close_dialog_next" alt=""></div>-->
+        <div style="clear: both"></div>
+        <div class="modal-content-how top-fan">
+          <div class="how-to-content-fannext">
+            <h4 class="how-to-headnext">Super fan of the Week</h4>
+            <div class="insideRow">
+              <p id="week1">Users ko streamers ko gift bejne honge.</p>
+              <p id="week2">
+                Users gift bejkar votes kama sakte hai, jo fir points me convert
+                ho jayenge.
+              </p>
+              <p id="week3">
+                Fir users un points ko istamal kar sakte hai rewards paane ke
+                liye.
+              </p>
+              <p id="week4">Game mein 8 cricket teams rahengi.</p>
+
+              <p><b>Every week: Friday 00.00 GMT- Thursday 23. 59.59 GMT</b></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="closetop" id="closesuperFanDialog">
+          <img src="img/close.png" class="close_dialog_next" alt="" />
+        </div>
+      </div>
+      <!-- how to play -->
+      <div id="howTo" class="modal" style="display: none">
+        <!-- Modal content -->
+        <!--<div class="close" id="closeHowTo"><img src="img/close.png" class="close_dialog_next1" alt=""></div>-->
+        <div style="clear: both"></div>
+        <div class="modal-content-how">
+          <!--<center><img src="img/howToHead.png" class="head-ribbon-new"></center>-->
+          <div class="how-to-content">
+            <!--<center class="howtohead1">HOW TO PLAY</center>-->
+            <center>
+              <img
+                src="img/guide.png"
+                class="head-ribbon-new"
+                style="position: relative; top: -5vw"
+              />
+            </center>
+            <div class="inner-content-how">
+              <!--<p id="howTo1">It’s officially time for the season of Cricket on SK! All the Cricket lovers, buckle up ‘cause the stumps are ready!</p>-->
+              <h4
+                class="how-to-start"
+                id="howtohead"
+                style="margin-bottom: 2vw"
+              >
+                HOW CAN YOU START PLAYING?
+              </h4>
+              <ul id="htp1"></ul>
+
+              <h4
+                class="win-of-the-week"
+                id="howtohead"
+                style="margin-bottom: 2vw"
+              >
+                WEEKLY RANKING RULES:
+              </h4>
+
+              <ul id="htp2"></ul>
+
+              <h4
+                class="rankings-1"
+                id="howtohead"
+                style="margin-bottom: 2vw"
+              ></h4>
+
+              <ul id="htp3"></ul>
+
+              <h4
+                class="the-best-team"
+                id="howtohead"
+                style="margin-bottom: 2vw"
+              >
+                OVERALL RANKING RULES:
+              </h4>
+
+              <ul id="htp4"></ul>
+
+              <!--<ul id="ulguide1">
+             
+            </ul>
+            <h4 class="how-to-head" style="margin-bottom: 2vw;">Team overall Rewards:</h4>
+<ul>
+           <li> Top 1st Team from each team will receive: 10 TROPHIES </li>
+ <li>Rank 2nd: 7 TROPHIES </li>
+ <li>Rank 3rd: 5 TROPHIES </li>
+ <li>Teams ranking from 4th to 10th: 3 TROPHIES</li></ul>
+             <p id="howTo2">Users gift bejkar votes kama sakte hai, jo fir points me convert ho jayenge.</p>
+            <p id="howTo3">Fir users un points ko istamal kar sakte hai rewards paane ke liye. (<span>100 beans = 1 vote point</span>)</p>
+            <p id="howTo4">Game mein 8 cars rahengi.</p>
+            <p id="howTo5">Gifts bejne ke baad jab users ko points milenge, tab vo usse istamal kar sakte hai apne favourite team ko vote karne ke liye. (<span>1 point = 1 vote</span>)</p> 
+            <p id="howTo5a">Gifts bejne ke baad jab users ko points milenge, tab vo usse istamal kar sakte hai apne favourite team ko vote karne ke liye. (<span>1 point = 1 vote</span>)</p>
+            <h4 class="how-to-head" style="margin-bottom: 2vw;">Weekly Team Rewards:</h4>
+         
+           
+           <p id="howTo6">Weekly rankings of the team will be based on number of votes they receive, the overall rankings will be decided on the STARS which the teams receive after each week based on their weekly ranking.</p>
+           <p id="howTo6a">The weekly leader board will start every Monday 00.00 GMT and reset on every Sunday 23:59:59 GMT</p>
+            <p id="howTo6b">Team ranked 1st will receive:<span> 10 Medals</span></p>
+            <p id="howTo6c">Team ranked 2nd will receive:<span> 7 Medals</span></p>
+            <p id="howTo6d">Team ranked 3rd will receive: <span> 5 Medals</span></p>
+            <p id="howTo6e">Teams ranked from 4th to 8th will receive: <span> 3 Medals</span></p>
+   --
+            <h4 class="how-to-head" style="margin-bottom: 2vw;">Cricket Team Names:</h4>
+            <p id="ulguide2"></p>
+            <h4 class="how-to-head" style="margin-bottom: 2vw;">Winner of the week:</h4>
+            <p id="ulguide3" style="padding-left: 5vw;"></p>-->
+              <table class="bordeer-all">
+                <tr>
+                  <th id="wr1">Team’s Ranking in the Weekly Leaderboard</th>
+                  <th id="wr1a">Number of Trophies you will receive</th>
+                </tr>
+                <tr>
+                  <td id="wr2">1st Team</td>
+                  <td id="wr2a">10</td>
+                </tr>
+                <tr>
+                  <td id="wr3">2nd Team</td>
+                  <td id="wr3a">7</td>
+                </tr>
+                <tr>
+                  <td id="wr4">3rd Team</td>
+                  <td id="wr4a">5</td>
+                </tr>
+                <tr>
+                  <td id="wr5">4th-8th Team</td>
+                  <td id="wr5a">3</td>
+                </tr>
+              </table>
+
+              <div id="htp5"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="close" id="closeHowTo">
+          <img src="img/close.png" class="close_dialog_next1" alt="" />
+        </div>
+      </div>
+      <!-- Reards modal  -->
+      <div id="rewards" class="modal" style="display: none">
+        <!-- Modal content -->
+        <center>
+          <img src="img/Event-rewards-text.png" class="rewards-banner" />
+        </center>
+        <!--<div class="close" id="closeRewards"><img src="img/close.png" class="close_dialog_next" alt=""></div>-->
+        <div style="clear: both"></div>
+        <div class="outermodal">
+          <!--<center><h2 class="Rewardbanhead">REWARDS</h2></center>-->
+          <!--<center><img src="img/Event-rewards-text.png" class="rewards-banner"></center>-->
+          <div class="modal-content-rewards">
+            <div class="bg-talen col-two">
+              <div>
+                <button
+                  id="btn-rew-user"
+                  class="btn-talen active-talen"
+                  onclick="rewardChange(event,1)"
+                >
+                  TEAM
+                </button>
+              </div>
+              <div>
+                <button
+                  id="btn-rew-talent"
+                  onclick="rewardChange(event,2)"
+                  class="btn-talen"
+                >
+                  Talent
+                </button>
+              </div>
+            </div>
+            <div id="UserRewards" class="reward-main-div1">
+              <div class="col-two">
+                <div>
+                  <button
+                    class="btn-league active-league"
+                    onclick="rewardsChange(1)"
+                    id="OverallBtn"
+                  >
+                    <img src="img/overallbtn.png" />
+                  </button>
+                </div>
+                <div>
+                  <button
+                    class="btn-league"
+                    onclick="rewardsChange(2)"
+                    id="weeklyBtn"
+                  >
+                    <img src="img/hourlybtn.png" />
+                  </button>
+                </div>
+              </div>
+              <div class="" id="overallRewards">
+                <!-- <div class="rank-text">Winner Team</div> -->
+                <div class="outer-wrapper">
+                  <div class="inner-wrapper">
+                    <div class="rank-text"></div>
+                    <div class="rank-text">Winner Team</div>
+                    <div class="col-two new-bg">
+                      <div>
+                        <img
+                          src="img/rewardPop/beanPot.png"
+                          class="img-wrapper"
+                        />
+                      </div>
+                      <div><img src="img/fury.png" class="img-wrapper" /></div>
+                    </div>
+                    <p>
+                      <img src="img/01.png" class="icon-10" />Rank 1:
+                      <b>30%</b> of the beans pot +Fury profile frame x15 days
+                    </p>
+
+                    <p>
+                      <u>Swipe left <span>&#187;</span></u>
+                    </p>
+                  </div>
+                  <div class="inner-wrapper">
+                    <div class="rank-text">Winner Team</div>
+                    <div class="col-two new-bg">
+                      <div>
+                        <img
+                          src="img/rewardPop/beanPot.png"
+                          class="img-wrapper"
+                        />
+                      </div>
+                      <div><img src="img/fury.png" class="img-wrapper" /></div>
+                    </div>
+                    <p>
+                      <img src="img/02.png" class="icon-10" />Rank 2:
+                      <b>20%</b> of the beans pot + Fury profile frame x10 days
+                    </p>
+                  </div>
+                  <div class="inner-wrapper">
+                    <div class="rank-text">Winner Team</div>
+                    <div class="col-two new-bg">
+                      <div>
+                        <img
+                          src="img/rewardPop/beanPot.png"
+                          class="img-wrapper"
+                        />
+                      </div>
+                      <div><img src="img/fury.png" class="img-wrapper" /></div>
+                    </div>
+                    <p>
+                      <img src="img/03.png" class="icon-10" />Rank 3:
+                      <b>10%</b> of the beans pot + Fury profile frame x7 days
+                    </p>
+                  </div>
+                  <div class="inner-wrapper">
+                    <div class="rank-text">Runner up Team</div>
+                    <div class="col-two new-bg">
+                      <div>
+                        <img
+                          src="img/rewardPop/beanPot.png"
+                          class="img-wrapper"
+                        />
+                      </div>
+                      <div><img src="img/fury.png" class="img-wrapper" /></div>
+                    </div>
+                    <p>
+                      <img src="img/01.png" class="icon-10" />Rank 1:
+                      <b>20%</b> of the beans pot + Fury profile frame x15 days
+                    </p>
+                  </div>
+                  <div class="inner-wrapper">
+                    <div class="rank-text">Runner up Team</div>
+                    <div class="col-two new-bg">
+                      <div>
+                        <img
+                          src="img/rewardPop/beanPot.png"
+                          class="img-wrapper"
+                        />
+                      </div>
+                      <div><img src="img/fury.png" class="img-wrapper" /></div>
+                    </div>
+                    <p>
+                      <img src="img/02.png" class="icon-10" />Rank 2:
+                      <b>15%</b> of the beans pot + Fury profile frame x10 days
+                    </p>
+                  </div>
+                  <div class="inner-wrapper">
+                    <div class="rank-text">Runner up Team</div>
+                    <div class="col-two new-bg">
+                      <div>
+                        <img
+                          src="img/rewardPop/beanPot.png"
+                          class="img-wrapper"
+                        />
+                      </div>
+                      <div><img src="img/fury.png" class="img-wrapper" /></div>
+                    </div>
+                    <p>
+                      <img src="img/03.png" class="icon-10" />Rank 3:
+                      <b>5%</b> of the beans pot + Fury profile frame x7 days
+                    </p>
+                    <p>
+                      <u><span>&#171;</span>Swipe Right <span>&#171;</span></u>
+                    </p>
+                  </div>
+                </div>
+                <!-- <div class="slideshow-container1">
+              <div class="mySlides1 slide1">
+                <div class="rank-text">Winner Team</div>
+                <div class="col-one">80%
+                  <div class="align-cent"><img src="img/rewardPop/beanFrame.gif" style="width: 100%;"></div>
+                  <div class="desc-para">
+                    <ul>
+                    <li>Top 1: <b>30%</b> of the beans pot + ROYAL profile frame* 10 days </li>
+                    <li>Top 2: <b>20%</b> of the beans pot + ROYAL profile frame* 8 days </li>
+                    <li>Top 3: <b>10%</b> of the beans pot + ROYAL profile frame* 7 days </li>
+                  </ul>
+                  </div>
+                </div> 
+              </div>
+              <div class="mySlides1 slide1">
+                <div class="rank-text">Runner's up Team</div>
+                <div class="col-one">
+                  <div class="align-cent"><img src="img/rewardPop/beanFrame.gif" style="width: 100%;"></div>
+                  <div class="desc-para">
+                    <ul>
+                    <li>Top 1:  <b>20%</b> of the beans pot + ROYAL profile frame* 10 days </li>
+                    <li>Top 2:  <b>15%</b> of the beans pot + ROYAL profile frame* 8 days </li>
+                    <li>Top 3:  <b>5%</b> of the beans pot + ROYAL profile frame* 7 days </li>
+                  </ul>
+                  </div>
+                </div> 80%
+              </div>
+            </div>
+            <div style="text-align:center;">
+              <span class="dot1"></span>
+              <span class="dot1"></span>
+              
+            </div> -->
+              </div>
+              <div class="" id="weeklyRewards" style="display: none">
+                <div class="outer-wrapper">
+                  <div class="inner-wrapper">
+                    <div class="col-one new-bg">
+                      <div>
+                        <img
+                          src="img/rewardPop/beanPot.png"
+                          class="img-wrapper1"
+                        />
+                      </div>
+                    </div>
+                    <!--  <p>
+                  <b>Rank 1</b> from the team with most POINTS will receive <b>25%</b> of beans pot<br><b>Rank 2nd</b> from the team with most POINTS will receive <b>15%</b> of beans pot.<br><b>Top 3</b> from the team with most POINTS will receive <b>10%</b> of beans pot.</p>
+                  <p></p> -->
+                    <table class="rewtable">
+                      <tr>
+                        <th>Team Rank</th>
+                        <th>User Rank inside the team</th>
+                        <th>Beans pot budget allocation</th>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>1st</td>
+                        <td>25%</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>2nd</td>
+                        <td>15%</td>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>3rd</td>
+                        <td>10%</td>
+                      </tr>
+                    </table>
+                    <u>Swipe left <span>&#187;</span></u>
+                  </div>
+                  <div class="inner-wrapper">
+                    <div class="col-one new-bg">
+                      <div>
+                        <img
+                          src="img/rewardPop/beanPot.png"
+                          class="img-wrapper1"
+                        />
+                      </div>
+                    </div>
+                    <!-- <p><b>Top contributor</b> from team with <b>2nd</b> most POINTS Top contributor from team with 3rd most POINTS : <b>7% </b>of beans pot.</p> -->
+                    <table class="rewtable">
+                      <tr>
+                        <th>Team Rank</th>
+                        <th>User Rank inside the team</th>
+                        <th>Beans pot budget allocation</th>
+                      </tr>
+
+                      <tr>
+                        <td>2</td>
+                        <td>1st</td>
+                        <td>15%</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>2nd</td>
+                        <td>4%</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>1st</td>
+                        <td>7%</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>2nd</td>
+                        <td>4%</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="inner-wrapper">
+                    <div class="col-one new-bg">
+                      <div>
+                        <img
+                          src="img/rewardPop/beanPot.png"
+                          class="img-wrapper1"
+                        />
+                      </div>
+                    </div>
+                    <p>
+                      Remaining top contributors from teams ranking from 4th to
+                      8th will receive <b>4%</b> of beans pot.<br /><br />
+                    </p>
+
+                    <p>
+                      <u><span>&#171;</span>Swipe Right <span>&#171;</span></u>
+                    </p>
+                  </div>
+                </div>
+
+                <!-- <div class="col-one">
+                  <div class="align-cent"><img src="img/rewardPop/beanPot.png" style="width: 100%;"></div>
+                  <div class="desc-para">
+                   <ul>
+                    <li><b>Top 1 </b>from Team with most votes: <b>25% </b>of the weekly beans pot<br>2nd from team with most votes: <b>15%</b><br>3rd from team with most votes:<b> 10%</b></li>
+                    <li><b>Top contributor</b> from team with 2nd most votes: <b>15%</b><br>Top contributor from team with 3rd most votes: <b>10% </b></p></li>
+                    <li>Remaining top contributors from teams rankings from 4th to 8th: <b>5%</b></li>
+                    </ul>
+                    <b>Every week :Friday 00.00 GMT - Thursday 23:59:59 GMT</b>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+            <div
+              class="reward-main-div1"
+              id="talentRewards"
+              style="display: none"
+            >
+              <div class="col-two">
+                <div>
+                  <button
+                    class="btn-league active-league"
+                    onclick="rewardsChangeTalent(1)"
+                    id="OverallBtnTalent"
+                  >
+                    <img src="img/overallbtn.png" />
+                  </button>
+                </div>
+                <div>
+                  <button
+                    class="btn-league"
+                    onclick="rewardsChangeTalent(2)"
+                    id="weeklyBtnTalent"
+                  >
+                    <img src="img/hourlybtn.png" />
+                  </button>
+                </div>
+              </div>
+              <div id="overallRewardsTalent">
+                <div class="outer-wrapper">
+                  <div class="inner-wrapper">
+                    <!-- <div class="rank-text">&nbsp;</div> -->
+                    <div class="col-two new-bg">
+                      <div>
+                        <img
+                          src="../rewards/cricketAudioTheme.png"
+                          class="img-wrapper"
+                        />
+                      </div>
+                      <div>
+                        <img
+                          src="../rewards/valentineFrameUser.png"
+                          class="img-wrapper"
+                        />
+                      </div>
+                    </div>
+                    <p>
+                      <img src="img/01.png" class="icon-10" />
+                      <b>Top 1:</b> Cricket Audio Theme x1 month + Raging Bull
+                      Profile Frame x1 month
+                    </p>
+                    <p>
+                      <u>Swipe left <span>&#187;</span></u>
+                    </p>
+                  </div>
+                  <div class="inner-wrapper">
+                    <!-- <div class="rank-text">&nbsp;</div> -->
+                    <div class="col-two new-bg">
+                      <div>
+                        <img
+                          src="../rewards/cricketAudioTheme.png"
+                          class="img-wrapper"
+                        />
+                      </div>
+                      <div>
+                        <img
+                          src="../rewards/valentineFrameUser.png"
+                          class="img-wrapper"
+                        />
+                      </div>
+                    </div>
+                    <p>
+                      <img src="img/02.png" class="icon-10" />
+                      <b>Top 2: </b>Cricket Audio Theme x20 days + Raging Bull
+                      Profile Frame x20 days
+                    </p>
+                  </div>
+                  <div class="inner-wrapper">
+                    <!-- <div class="rank-text">&nbsp;</div> -->
+                    <div class="col-two new-bg">
+                      <div>
+                        <img
+                          src="../rewards/cricketAudioTheme.png"
+                          class="img-wrapper"
+                        />
+                      </div>
+                      <div>
+                        <img
+                          src="../rewards/valentineFrameUser.png"
+                          class="img-wrapper"
+                        />
+                      </div>
+                    </div>
+                    <p>
+                      <img src="img/03.png" class="icon-10" />
+                      <b>Top 3:</b> Cricket Audio Theme x15 days + Raging Bull
+                      Profile Frame x15 days
+                    </p>
+
+                    <p>
+                      <u><span>&#171;</span>Swipe Right <span>&#171;</span></u>
+                    </p>
+                  </div>
+                </div>
+                <!-- <div class="col-one">
+              <div><img src="img/rewardPop/gemPot.png" style="width: 100%;"></div>
+              <div class="desc-para">
+                   <ul>
+                <li><b>Top 1:</b> 1600K Gems  + Banner display* 3 days (Target: 220M) </li>
+                
+                <li><b>Top 2: </b>1400K Gems  + Banner display* 3 days(Target: 200M) </li>
+               
+                <li><b>Top 3:</b> 1000K Gems  + Banner display* 3  days (Target: 180M) </li>
+               </ul>
+                 
+              </div>
+            </div> -->
+              </div>
+              <div id="weeklyRewardsTalent" style="display: none">
+                <div class="outer-wrapper">
+                  <div class="inner-wrapper">
+                    <!-- <div class="rank-text">&nbsp;</div> -->
+                    <div class="col-three new-bg">
+                      <div>
+                        <img src="../rewards/Trophy.png" class="img-wrapper2" />
+                      </div>
+                      <div>
+                        <img
+                          src="../rewards/stadiumAudioTheme.jpg"
+                          class="img-wrapper2"
+                        />
+                      </div>
+                      <div>
+                        <img
+                          src="../rewards/royalProfileFrame.png"
+                          class="img-wrapper2"
+                        />
+                      </div>
+                    </div>
+                    <p>
+                      <img src="img/01.png" class="icon-10" />
+                      <b>Top 1:</b> 1000 POINTS + Stadium theme x5 days + ROYAL
+                      profile frame x2 days.
+                    </p>
+                    <p>
+                      <u>Swipe left <span>&#187;</span></u>
+                    </p>
+                  </div>
+                  <div class="inner-wrapper">
+                    <!-- <div class="rank-text">&nbsp;</div> -->
+                    <div class="col-three new-bg">
+                      <div>
+                        <img src="../rewards/Trophy.png" class="img-wrapper2" />
+                      </div>
+                      <div>
+                        <img
+                          src="../rewards/stadiumAudioTheme.jpg"
+                          class="img-wrapper2"
+                        />
+                      </div>
+                      <div>
+                        <img
+                          src="../rewards/royalProfileFrame.png"
+                          class="img-wrapper2"
+                        />
+                      </div>
+                    </div>
+                    <p>
+                      <img src="img/02.png" class="icon-10" />
+                      <b>Top 2: </b> 700 POINTS + Stadium theme x4 days +ROYAL
+                      profile frame x2 days.
+                    </p>
+                  </div>
+                  <div class="inner-wrapper">
+                    <!-- <div class="rank-text">&nbsp;</div> -->
+                    <div class="col-three new-bg">
+                      <div>
+                        <img src="../rewards/Trophy.png" class="img-wrapper2" />
+                      </div>
+                      <div>
+                        <img
+                          src="../rewards/stadiumAudioTheme.jpg"
+                          class="img-wrapper2"
+                        />
+                      </div>
+                      <div>
+                        <img
+                          src="../rewards/royalProfileFrame.png"
+                          class="img-wrapper2"
+                        />
+                      </div>
+                    </div>
+                    <p>
+                      <img src="img/03.png" class="icon-10" /> <b>Top 3:</b> 500
+                      POINTS + Stadium theme x3 days + ROYAL profile frame x2
+                      days.
+                    </p>
+
+                    <p>
+                      <u><span>&#171;</span>Swipe Right <span>&#171;</span></u>
+                    </p>
+                  </div>
+                </div>
+
+                <!-- <div class="col-one">
+              <div><img src="img/rewardPop/themePot.png" style="width: 100%;"></div>
+              <div class="desc-para">
+                <ul>
+                <li><b>Top 1:</b> 1000  vote Points + 5 Days RULER OF JUNGLE audio theme + ROYAL profile frame* 2 days </li>
+                <li><b>Top 2:</b> 700  vote Points + 4 Days RULER OF JUNGLE audio theme + ROYAL profile frame* 2 days </li>
+                <li><b>Top 3:</b> 500  vote Points + 3 Days RULER OF JUNGLE audio theme + ROYAL profile frame* 2 days </li>
+              </ul>
+                <b>Every week :Friday 00.00 GMT - Thursday 23:59:59 GMT</b>
+              </div>
+            </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="close" id="closeRewards">
+          <img src="img/close.png" class="close_dialog_next" alt="" />
+        </div>
+      </div>
+      <!-- user play rewards -->
+      <div id="userPlayRewards" class="modal" style="display: none">
+        <!-- Modal content -->
+        <div class="close-play" id="closePlayRew">
+          <img src="img/close.png" class="close_dialog_play" alt="" />
+        </div>
+        <div style="clear: both"></div>
+        <div class="modal-content play-model">
+          <h4 class="cong-text mt-cong">
+            <img src="./img/whatashot.png" class="wid-80" id="oopshot" />
+          </h4>
+
+          <p id="rewTextDet">
+            Congratulations on your achievement of collecting
+            <span id="sRuns" class="sbean"></span> POINTS by scoring goals! Your
+            great achievement has earned you
+            <span id="sBeans" class="sbean"></span> beans. Continue playing and
+            keep this fantastic goal-scoring rate!.
+          </p>
+          <div class="text-center-align" id="congr-text"></div>
+          <div class="reward-main-div" id="rewardList"></div>
+        </div>
+      </div>
+      <!-- vote success congrtulation  -->
+      <div id="userVoteModal" class="modal" style="display: none">
+        <!-- Modal content -->
+        <div class="close" id="closeVoteModal">
+          <img src="img/close.png" class="closetop2" alt="" />
+        </div>
+        <div style="clear: both"></div>
+        <div class="modal-content">
+          <h4 class="cong-text" id="voteCongText">Hurrah !!</h4>
+          <!--   <p>Hey Speeder! Thank you for appreciating _____ (team name). Hope you team (team name) again. Keep supporting us till the very end and make us win this league.</p> -->
+          <p class="cong-vote-text" id="voteCpngText"></p>
+        </div>
+      </div>
+      <!-- Modal Boxes End  -->
+      <p class="note" style="width: 100%; text-align: center">
+        All rights reserved by StreamKar
+      </p>
+
+      <footer class="footer" id="floatbtn" style="display: none">
+        <a id="button_android" class="ball"
+          ><img src="./../common/img/openapp_logo.png" />Join & get a chance to
+          win smartphones!
+        </a>
+        <div class="clear"></div>
+      </footer>
+    </div>
+    <script type="text/javascript" src="js/datalist.js?v=8"></script>
+  </body>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-4DGWX5FW0C");
+
+    window.onload = function () {
+      gtag("send", "event", {
+        eventCategory: "SpaceRace2k21",
+        eventAction: "Click",
+        eventLabel: "enquiry SpaceRace2k21 page",
+      });
+    };
+
+    !(function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () {
+        n.callMethod
+          ? n.callMethod.apply(n, arguments)
+          : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = "2.0";
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s);
+    })(
+      window,
+      document,
+      "script",
+      "https://connect.facebook.net/en_US/fbevents.js"
+    );
+    fbq("init", "234701767200765");
+    fbq("track", "PageView");
+  </script>
+  <noscript>
+    <img
+      height="1"
+      width="1"
+      src="https://www.facebook.com/tr?id=234701767200765&ev=PageView
+&noscript=1"
+    />
+  </noscript>
+
+  <script type="text/javascript">
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > 300) {
+        $("#backtotopbtn").addClass("show");
+      } else {
+        $("#backtotopbtn").removeClass("show");
+      }
+    });
+    $("#backtotopbtn").on("click", function (e) {
+      e.preventDefault();
+      $("html, body").animate({ scrollTop: 0 }, "300");
+    });
+    $(function () {
+      var input = $("#noVoteText"); // input text field
+      var default_value = input.val();
+      input.focus(function () {
+        if ($.trim($(input).val()) == default_value) input.val("");
+      });
+      input.blur(function () {
+        if ($.trim($(input).val()) == "") input.val(default_value);
+      });
+    });
+    // script for Slider
+
+    //slides javascript end
+
+    //--------------------------------------------Timer-------------------------------------------------
+
+    var today = new Date();
+    var dd = today.getUTCDate();
+
+    $("#simple_timer").syotimer({
+      year: 2023,
+      month: 11,
+      day: 2,
+      hour: 25,
+      minute: 0o0,
+      timeZone: 1,
+    });
+
+    //---------------------------------------------------------------------------------------
+  </script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript">
+    jssor_1_slider_init();
+  </script>
+</html>
