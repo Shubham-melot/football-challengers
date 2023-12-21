@@ -1230,18 +1230,21 @@ animation-timing-function: linear;*/
 }
 
 .how-to-content {
-  padding: 5vw;
-  background: url("../img/howtoplayBg.png") center/100% 100% no-repeat; /* border: none; */
+  /* padding: 5vw; */
+  background: url("../img/How to play and guide bg.png") center/100% 100%
+    no-repeat; /* border: none; */
   border-radius: 0; /* height: 65vh; background: url(../img/Event\ rewards\ bg.png) center/100% 100% no-repeat;*/ /* overflow: scroll; */ /* border: 1px solid yellow; */
   margin: auto;
   width: 89%;
   font-family: Kadwa Bold; /* padding: 8vw 3vw 7vw 3vw; */
   margin-top: 10vw;
   font-size: 3vw;
+  padding: 8vw 3vw 10vw 3vw;
 }
 
 .how-to-content-fan {
-  background: url("../img/Rewards-bg.png") center/100% 100% no-repeat; /* border:2px solid #fff; */ /* border-radius: 2vw; */
+  background: url("../img/How to play and guide bg.png") center/100% 100%
+    no-repeat; /* border:2px solid #fff; */ /* border-radius: 2vw; */
   width: 81%;
   padding: 21vw 10vw 16vw 10vw;
   font-size: 3vw;
@@ -1252,7 +1255,8 @@ animation-timing-function: linear;*/
 }
 
 .how-to-content-fannext {
-  background: url("../img/Rewards-bg.png") center/100% 100% no-repeat; /* border:2px solid #fff; */ /* border-radius: 2vw; */
+  background: url("../img/How to play and guide bg.png") center/100% 100%
+    no-repeat; /* border:2px solid #fff; */ /* border-radius: 2vw; */
   width: 81%;
   padding: 0vw 10vw 16vw 10vw;
   font-size: 3vw;
@@ -1938,7 +1942,7 @@ ul {
 .outermodal {
   margin-top: 15vw;
 
-  background: url(../img/rewardsbg.png) center/100% 100% no-repeat;
+  background: url("../img/Rewadrs popup bg.png") center/100% 100% no-repeat;
 
   width: 96%;
 
@@ -3059,4 +3063,9 @@ th {
 .talent-strip {
   padding-block: 2vw 4vw !important;
   align-items: center;
+}
+.oops-text-img {
+  width: 34%;
+  margin-inline: auto;
+  margin-top: 4px;
 }
