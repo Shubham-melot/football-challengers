@@ -896,7 +896,7 @@ function getLuckyPlay(local) {
           $("#luckyImg").show();
           Swal.fire({
             html: luckyPlayRew.msg,
-            title: '<img src="./img/oof.png" class="w100" />',
+            title: '<img src="./img/Oops text.png" class="oops-text-img" />',
             allowOutsideClick: false,
             allowEscapeKey: false,
             showConfirmButton: false,
@@ -922,7 +922,7 @@ function getLuckyPlay(local) {
     //getLuckyPlayPopulate(luckyPlayRew);
     Swal.fire({
       html: "Please enter chances other than 0",
-      title: '<img src="./img/oof.png" class="w100" />',
+      title: '<img src="./img/Oops text.png" class="oops-text-img" />',
       allowOutsideClick: false,
       allowEscapeKey: false,
       showConfirmButton: false,
@@ -998,7 +998,7 @@ function getLuckyPlayPopulate(luckyPlayRew) {
     $("#playImg").attr("onClick", "getLuckyPlay(0);");
     Swal.fire({
       html: "Something went wrong.Please Try again later. Thanks.",
-      title: '<img src="./img/oof.png" class="w100" />',
+      title: '<img src="./img/Oops text.png" class="oops-text-img" />',
       showConfirmButton: false,
       allowOutsideClick: false,
       allowEscapeKey: false,
@@ -2173,7 +2173,7 @@ function teamVote(local) {
   } else if (voteCount == 0 && voteText == 0) {
     Swal.fire({
       html: "<b>Please choose your favourite team to support and cheer them on with a goal! Thank you!</b>",
-      title: '<img src="./img/oof.png" class="w100" />',
+      title: '<img src="./img/Oops text.png" class="oops-text-img" />',
       showConfirmButton: false,
       allowOutsideClick: false,
       allowEscapeKey: false,
@@ -2194,7 +2194,7 @@ function teamVote(local) {
   } else if (voteCount < 0) {
     Swal.fire({
       html: " Points count cannot be less then zero",
-      title: '<img src="./img/oof.png" class="w100" />',
+      title: '<img src="./img/Oops text.png" class="oops-text-img" />',
       showConfirmButton: false,
       allowOutsideClick: false,
       allowEscapeKey: false,
@@ -2303,7 +2303,7 @@ function teamVotePopulate(teamVoteRec, teamIndex) {
   } else if (teamVoteRec.errorCode !== 0) {
     Swal.fire({
       html: "Please choose your favourite team to support and cheer them on with a goal! Thank you!",
-      title: '<img src="./img/oof.png" class="w100" />',
+      title: '<img src="./img/Oops text.png" class="oops-text-img" />',
       showConfirmButton: false,
       allowOutsideClick: false,
       allowEscapeKey: false,
@@ -2312,7 +2312,7 @@ function teamVotePopulate(teamVoteRec, teamIndex) {
   } else {
     Swal.fire({
       html: teamVoteRec.errorCode,
-      title: '<img src="./img/oof.png" class="w100" />',
+      title: '<img src="./img/Oops text.png" class="oops-text-img" />',
       showConfirmButton: false,
       allowOutsideClick: false,
       allowEscapeKey: false,

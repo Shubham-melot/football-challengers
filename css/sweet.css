@@ -1638,7 +1638,7 @@ body.swal2-no-backdrop .swal2-shown.swal2-bottom-end,body.swal2-no-backdrop .swa
 }
 
 .swal2-popup {
-    background: rgba(2, 17, 50, 0) url('../img/Rewards-bg.png') no-repeat !important;
+    background: rgba(2, 17, 50, 0) url('../img/oops popup bg.png') no-repeat !important;
     /* height: 100%; */
     width: 100%;
     background-size: 100% 100% !important;
