@@ -20,6 +20,14 @@ and open the template in the editor.
   font-weight: normal;
   src: local("TitanOne"), url("font/TitanOne-Regular.ttf") format("woff");
 }
+
+@font-face {
+  font-family: "HiJack";
+  font-style: normal;
+  font-weight: normal;
+  src: local("TitanOne"), url("font/Hi-Jack.otf") format("woff");
+}
+
 a {
   display: block;
   border: none !important;
@@ -289,12 +297,12 @@ body {
 .gifts-div {
   position: relative;
   width: 96%;
-  height: 150px;
+  /* height: 150px; */
   margin-inline: auto;
-  /* margin: 0vw auto 6vw; */
+  margin: 8vw auto -5vw;
   background: url("../img/Event gift bg.png") center/100% 100% no-repeat;
-  padding: 5vw 0vw 4vw;
-  padding-top: 10vw;
+  padding-top: 8vw;
+  padding: 11vw 0vw 14vw;
 }
 .gift-img {
   width: 70%;
@@ -430,7 +438,7 @@ body {
 }
 
 .team-select {
-  width: 118% !important;
+  /* width: 118% !important; */
   display: inline-block;
   margin: auto;
   padding: 3vw;
@@ -573,8 +581,8 @@ body {
 }
 .chance-text {
   font-size: 3.5vw;
-  padding-top: 7vw;
-  padding-bottom: 3vw;
+  padding-top: 6vw;
+  padding-bottom: 2vw;
   vertical-align: middle;
   /* line-height: 3vw; */
   color: #014a01;
@@ -587,7 +595,7 @@ body {
   border-radius: 5vw;
   margin: -18vw auto 0;
   text-align: center;
-  width: 63%;
+  width: 56%;
   /* margin-bottom: 8vw; */
   font-weight: bold;
   background: url(../img/chanceleft.png);
@@ -677,14 +685,15 @@ body {
   width: 50%;
   grid-template-columns: 50% 50% !important;
   grid-gap: 0% !important;
-  /* background: url('../img/talentBg.png') center/100% 100% no-repeat; */
+  background: url("../img/teamBtnbg.png") center/ 100% 100% no-repeat;
   /*color: transparent;*/
   padding: 0;
   margin: auto;
   margin-top: -2vw;
-  background: #013f01;
-  border-radius: 25vw;
+  /*background: #013f01;
+  border-radius: 25vw;*/
   color: white;
+  font-family: HiJack;
 }
 .btn-talen {
   width: 100%; /* background: transparent; */
@@ -693,19 +702,22 @@ body {
   margin-bottom: -1vw;
   margin-top: -1vw;
   height: 12vw;
-  font-size: 4vw;
+  font-size: 3vw;
   color: white;
-  font-weight: bold;
+  /*font-weight: bold;*/
+  font-family: HiJack;
 }
 .active-talen {
-  /* background: url('../img/btnTalenBg.png') center/100% 100% no-repeat; */ /*text-indent: 111111px;*/
-  color: #004c00; /* padding: 2.3vw 0; */
+  background: url('../img/teamStambg.png') center/100% 100% no-repeat;
+  color: #61260f; 
+  /* padding: 2.3vw 0; */
   font-weight: bold;
-  font-size: 4vw;
+  font-size: 3vw;
   height: 8vw;
   margin-top: 1vw;
-  background: #ffe000;
-  border-radius: 25vw;
+  /*background: #ffe000;
+  border-radius: 25vw;*/
+  font-family: HiJack;
 }
 .btn-league {
   width: 75%;
@@ -745,7 +757,7 @@ body {
 .bean-pot {
   width: 95%;
   background: url("../img/Beans pot bg.png") center/100% 100% no-repeat;
-  margin: -10vw auto;
+  margin: -10vw auto -16vw;
   /* padding: 12vw 0 0vw; */
   height: 44vh;
   margin-top: -26vw;
@@ -950,26 +962,34 @@ body {
 .rotating_wheel {
   width: 100%;
   overflow-x: hidden !important;
-  overflow-y: hidden; /* background-color: #010e2e; */ /* border: .8vw double #0009c0; */
-  margin: 7vw auto 0px; /* padding-top: 3vw; */
+  overflow-y: hidden;
+  /* background-color: #010e2e; */
+  /* border: .8vw double #0009c0; */
+  margin: 7vw auto 0px;
+  /* padding-top: 3vw; */
   z-index: -1;
   padding: 0vw 0vw;
 }
 .wheel_contain {
   position: relative;
-  width: 95%; /*  animation-name: wheel;
+  width: 95%;
+  /*  animation-name: wheel;
 animation-duration: 5s;
 animation-iteration-count: infinite;
 animation-timing-function: linear;*/
   margin: auto;
   background: url("../img/Winners of the week bg.png");
-  background-size: 100% 100%; /* height: 59%; */
-  padding-block-start: -10vw; /* padding-bottom: 4vw; */
+  background-size: 100% 100%;
+  /* height: 59%; */
+  padding-block-start: -10vw;
+  /* padding-bottom: 4vw; */
   padding-top: 15vw;
 }
 .wheel_contain .wheel {
-  width: 100%; /* display: block; */ /* margin-top: 15vw; */
-  margin: -2vw 0vw 16vw 1vw;
+  width: 100%;
+  /* display: block; */
+  /* margin-top: 15vw; */
+  margin: -6vw 0vw 12vw 1vw;
 }
 .wheel_contain .wheel_img1 {
   position: absolute;
@@ -1230,18 +1250,21 @@ animation-timing-function: linear;*/
 }
 
 .how-to-content {
-  padding: 5vw;
-  background: url("../img/howtoplayBg.png") center/100% 100% no-repeat; /* border: none; */
+  /* padding: 5vw; */
+  background: url("../img/How to play and guide bg.png") center/100% 100%
+    no-repeat; /* border: none; */
   border-radius: 0; /* height: 65vh; background: url(../img/Event\ rewards\ bg.png) center/100% 100% no-repeat;*/ /* overflow: scroll; */ /* border: 1px solid yellow; */
   margin: auto;
   width: 89%;
   font-family: Kadwa Bold; /* padding: 8vw 3vw 7vw 3vw; */
   margin-top: 10vw;
   font-size: 3vw;
+  padding: 8vw 3vw 10vw 3vw;
 }
 
 .how-to-content-fan {
-  background: url("../img/Rewards-bg.png") center/100% 100% no-repeat; /* border:2px solid #fff; */ /* border-radius: 2vw; */
+  background: url("../img/How to play and guide bg.png") center/100% 100%
+    no-repeat; /* border:2px solid #fff; */ /* border-radius: 2vw; */
   width: 81%;
   padding: 21vw 10vw 16vw 10vw;
   font-size: 3vw;
@@ -1252,7 +1275,8 @@ animation-timing-function: linear;*/
 }
 
 .how-to-content-fannext {
-  background: url("../img/Rewards-bg.png") center/100% 100% no-repeat; /* border:2px solid #fff; */ /* border-radius: 2vw; */
+  background: url("../img/How to play and guide bg.png") center/100% 100%
+    no-repeat; /* border:2px solid #fff; */ /* border-radius: 2vw; */
   width: 81%;
   padding: 0vw 10vw 16vw 10vw;
   font-size: 3vw;
@@ -1938,7 +1962,7 @@ ul {
 .outermodal {
   margin-top: 15vw;
 
-  background: url(../img/rewardsbg.png) center/100% 100% no-repeat;
+  background: url("../img/Rewadrs popup bg.png") center/100% 100% no-repeat;
 
   width: 96%;
 
@@ -1975,7 +1999,7 @@ ul {
   grid-template-columns: 15.3% 27.3% 17.3% 25.33%;
   text-align: center;
   justify-content: center;
-  background: url("../img/Leaderboard-strip.png");
+  background: url("../img/Leaderboard strip.png");
   height: 13vw;
   /* width: 59vw; */
   padding-top: 1vw;
@@ -2007,11 +2031,11 @@ ul {
 
 .main-leaderboard {
   background: url("../img/Leaderboard bg.png") center/100% 100% no-repeat;
-  padding: 11vw 0 0vw;
+  padding: 11vw 0 10vw;
   margin-top: -10vw; /*background: #1d446b;*/
   margin: auto;
   width: 91%; /*border-radius: 2vw;border: 2px solid #4fcde6;*/
-  padding-bottom: 1vw;
+  /* padding-bottom: 1vw; */
   min-height: 40vh;
 }
 
@@ -2032,7 +2056,7 @@ ul {
   display: block;
   margin: 0 auto;
   margin-block: 0;
-  margin-bottom: 4vw;
+  margin-bottom: 2vw;
   border: none;
   outline: none;
   width: 60%;
@@ -2302,11 +2326,11 @@ u {
 }
 
 .main-timer-div {
-  width: fit-content;
+  /* width: fit-content; */
   display: block;
   margin: 0vw auto 4vw;
   /* background-color: #011132; */
-  /*background: url('../img/Count-down-bg.png') center/100% 100% no-repeat;*/
+  background: url('../img/Timer_bg.png') center/100% 70% no-repeat;
   border-radius: 0;
   text-align: center;
   /* color: #fff; */
@@ -2320,7 +2344,7 @@ u {
 .timer {
   width: 100%;
   text-align: center;
-  margin-bottom: 0px !important;
+  margin-bottom: 5vw !important;
   margin: auto;
   border-radius: 0px;
 }
@@ -2344,7 +2368,7 @@ u {
 }
 
 .timer .table-cell .tab-unit {
-  font-size: 0.5rem;
+  font-size: 0.45rem;
   padding-top: 10px;
   padding: 0px 0px;
   color: #ffffff !important;
@@ -2360,7 +2384,7 @@ u {
   border-radius: 35%;
 }
 .winnerhead img {
-  width: 60%;
+  width: 65%;
   display: block;
   margin: auto;
 }
@@ -2697,7 +2721,7 @@ a {
 .leader-strip-bg {
   margin: 0vw auto;
   width: 100%;
-  background-image: url(../img/Leaderboard-strip.png);
+  background-image: url("../img/Leaderboard strip.png");
   background-size: 100% 100%;
   background-position: center;
   display: grid;
@@ -2738,7 +2762,7 @@ a {
 .silver-bg {
   margin: 1vw auto;
   width: 100%;
-  background-image: url(../img/frame2.png);
+  background-image: url("../img/Silver frame.png");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -2754,7 +2778,7 @@ a {
 .gold-bg {
   margin: 0vw auto;
   width: 100%;
-  background-image: url(../img/frame1.png);
+  background-image: url("../img/gold frame.png");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -2768,7 +2792,7 @@ a {
 .bronze-bg {
   margin: 1vw auto;
   width: 100%;
-  background-image: url(../img/frame3.png);
+  background-image: url("../img/bronze frame.png");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -3007,6 +3031,7 @@ th {
   max-width: 60%;
   gap: 1em;
   min-height: 12vw;
+  margin-bottom: 0.5em;
 }
 .leaderboard-btn {
   width: 90%;
@@ -3021,3 +3046,47 @@ th {
 .leaderboard-btn.active-league img {
   opacity: 1;
 }
+.top-3-talents {
+  display: flex;
+  align-items: center;
+}
+.top-container {
+  max-width: 28px;
+  aspect-ratio: 1/1;
+}
+.top-container:first-child {
+  margin-right: -8px;
+}
+.top-container:last-child {
+  margin-left: -8px;
+}
+.score-img {
+  max-width: 16px;
+  aspect-ratio: 1/1;
+}
+.talent-score-text {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.talent-name {
+  width: 100% !important;
+  margin-top: 0;
+  color: white !important;
+}
+.team-avatar {
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: 32px;
+  margin-block: 0;
+}
+.talent-strip {
+  padding-block: 2vw 4vw !important;
+  align-items: center;
+}
+.oops-text-img {
+  width: 34%;
+  margin-inline: auto;
+  margin-top: 4px;
+}
+  

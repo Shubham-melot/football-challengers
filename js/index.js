@@ -2,6 +2,8 @@
 var jssor_1_options = {
   $AutoPlay: 1,
   $SlideWidth: 250,
+  $SlideHeight: 250,
+  $SlideSpacing: 32,
   $ArrowNavigatorOptions: {
     $Class: $JssorArrowNavigator$,
   },

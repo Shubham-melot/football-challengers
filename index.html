@@ -82,7 +82,7 @@ and open the template in the editor.
         <div><button data-id="2">Hindi/urdu</button></div>
       </div>
       <header>
-        <img class="header-img" src="/img/Header.png" alt="header" />
+        <img class="header-img" src="./img/Header.png" alt="header" />
       </header>
       <!--   <div class="lang-select">
       <select onchange="contentNext(this.value);"   id="mov_type" name="mov_type"  class="selection-option">
@@ -155,7 +155,7 @@ and open the template in the editor.
               <div>
                 <img
                   data-u="image"
-                  src="img/team/2.png"
+                  src="img/Teams/Blue Sharks.png"
                   class="team-select"
                   onclick="teamSelection(2)"
                   id="team2"
@@ -164,7 +164,7 @@ and open the template in the editor.
               <div>
                 <img
                   data-u="image"
-                  src="img/team/6.png"
+                  src="img/Teams/Brave Blues.png"
                   class="team-select"
                   onclick="teamSelection(6)"
                   id="team6"
@@ -173,7 +173,7 @@ and open the template in the editor.
               <div>
                 <img
                   data-u="image"
-                  src="img/team/3.png"
+                  src="img/Teams/Devil Defenders.png"
                   class="team-select"
                   onclick="teamSelection(3)"
                   id="team3"
@@ -182,7 +182,7 @@ and open the template in the editor.
               <div>
                 <img
                   data-u="image"
-                  src="img/team/1.png"
+                  src="img/Teams/Fierce Fighters.png"
                   class="team-select"
                   onclick="teamSelection(1)"
                   id="team1"
@@ -191,7 +191,7 @@ and open the template in the editor.
               <div>
                 <img
                   data-u="image"
-                  src="img/team/8.png"
+                  src="img/Teams/Fiery Eagles.png"
                   class="team-select"
                   onclick="teamSelection(8)"
                   id="team8"
@@ -200,7 +200,7 @@ and open the template in the editor.
               <div>
                 <img
                   data-u="image"
-                  src="img/team/7.png"
+                  src="img/Teams/Golden Panthers.png"
                   class="team-select"
                   onclick="teamSelection(7)"
                   id="team7"
@@ -209,7 +209,7 @@ and open the template in the editor.
               <div>
                 <img
                   data-u="image"
-                  src="img/team/5.png"
+                  src="img/Teams/Real Rebels.png"
                   class="team-select"
                   onclick="teamSelection(5)"
                   id="team5"
@@ -218,7 +218,7 @@ and open the template in the editor.
               <div>
                 <img
                   data-u="image"
-                  src="img/team/4.png"
+                  src="img/Teams/Thundering Wizards.png"
                   class="team-select"
                   onclick="teamSelection(4)"
                   id="team4"
@@ -270,7 +270,7 @@ and open the template in the editor.
               data-scale="0.75"
               data-scale-left="0.75"
             >
-              <img src="/img/Left-arrow.png" style="width: 100%" alt="" />
+              <img src="./img/Left-arrow.png" style="width: 100%" alt="" />
             </div>
             <div
               data-u="arrowright"
@@ -280,7 +280,7 @@ and open the template in the editor.
               data-scale="0.75"
               data-scale-right="0.75"
             >
-              <img src="img/Right arrow.png" style="width: 100%" alt="" />
+              <img src="./img/Right arrow.png" style="width: 100%" alt="" />
             </div>
           </div>
           <input type="hidden" name="" id="teamSelectionVal" />
@@ -715,12 +715,11 @@ and open the template in the editor.
               Beans pot will be rewarded to <br />
               <span>Top 3 users</span> of Daily Bonus Leaderboard.
             </div>
+            <div class="bean-text" id="potoveralltxt" style="display: none">
+              <span>Top 3 contributors</span> from <span>Top 2 teams</span> will
+              receive the rewards.
+            </div>
           </div>
-
-          <!-- <div class="bean-text" id="potoveralltxt" style="display: none">
-            <span>Top 3 contributors</span> from <span>Top 2 teams</span> will
-            receive the rewards.
-          </div> -->
         </div>
       </div>
       <button class="btn-how-to" onclick="openRewards()" id="btn-how-to2">
@@ -739,23 +738,23 @@ and open the template in the editor.
         />
       </center>
       <div id="overallRanking" style="display: none" class="main-leaderboard">
-        <div class="col-two">
+        <div class="leaderboard-tab-header">
           <div>
             <button
               id="btn-league-rec"
               onclick="rankingLeague(event,1)"
-              class="btn-league active-league"
+              class="btn-league active-league leaderboard-btn"
             >
-              <img src="img/team.png" />
+              <img src="img/team stand btn.png" />
             </button>
           </div>
           <div>
             <button
-              class="btn-league"
+              class="btn-league leaderboard-btn"
               id="btn-overall-rec"
               onclick="rankingLeague(event,2)"
             >
-              <img src="img/teamstand.png" />
+              <img src="img/talent bg.png" />
             </button>
           </div>
         </div>
@@ -831,7 +830,37 @@ and open the template in the editor.
             </div>
           </div>
           <div class="leaderboard" id="leagueRecWeekly">
-            <table class="table-rec" id="leagueRecTableWeekly"></table>
+            <table class="table-rec" id="moh">
+              <tr class="leader-strip-bg talent-strip">
+                <td class="col-1 team-avatar">
+                  <img
+                    src="./img/Teams/Small icon/Blue Sharks small icon.png"
+                    alt=""
+                  />
+                </td>
+                <td class="col-2 talent-name">Talent Name</td>
+                <td class="top-3-talents">
+                  <img
+                    class="top-container"
+                    src="img/Silver frame.png"
+                    alt=""
+                  />
+                  <img class="top-container" src="img/gold frame.png" alt="" />
+                  <img
+                    class="top-container"
+                    src="img/bronze frame.png"
+                    alt=""
+                  />
+                </td>
+                <td class="talent-score-text">
+                  <img class="score-img" src="img/score.png" alt="" />
+                  <div style="display: flex">
+                    <span class="team-points">xxx</span>
+                    <span>&nbsp;Points</span>
+                  </div>
+                </td>
+              </tr>
+            </table>
           </div>
           <!-- talent ranking -->
           <div class="leaderboard" id="talentRecWeekly" style="display: none">
@@ -1136,7 +1165,7 @@ and open the template in the editor.
                   class="btn-talen active-talen"
                   onclick="rewardChange(event,1)"
                 >
-                  TEAM
+                  TEAM STAND
                 </button>
               </div>
               <div>
@@ -1157,7 +1186,7 @@ and open the template in the editor.
                     onclick="rewardsChange(1)"
                     id="OverallBtn"
                   >
-                    <img src="img/overallbtn.png" />
+                    <img src="img/Overall btn.png" />
                   </button>
                 </div>
                 <div>
@@ -1166,7 +1195,7 @@ and open the template in the editor.
                     onclick="rewardsChange(2)"
                     id="weeklyBtn"
                   >
-                    <img src="img/hourlybtn.png" />
+                    <img src="img/weekly btn.png" />
                   </button>
                 </div>
               </div>
@@ -1675,7 +1704,14 @@ and open the template in the editor.
         <div style="clear: both"></div>
         <div class="modal-content">
           <h4 class="cong-text" id="voteCongText">Hurrah !!</h4>
-          <!--   <p>Hey Speeder! Thank you for appreciating _____ (team name). Hope you team (team name) again. Keep supporting us till the very end and make us win this league.</p> -->
+          <!-- <p>
+            Hey Supporter! <br />
+            Thank you for appreciating _____ (team name). Hope you <br />
+            team (team name) again.
+            <br />
+            <br />
+            Keep supporting us till the very end and make us win this league.
+          </p> -->
           <p class="cong-vote-text" id="voteCpngText"></p>
         </div>
       </div>
@@ -1779,11 +1815,11 @@ and open the template in the editor.
     var dd = today.getUTCDate();
 
     $("#simple_timer").syotimer({
-      year: 2023,
-      month: 11,
-      day: 2,
+      year: 2024,
+      month: 03,
+      day: 07,
       hour: 25,
-      minute: 0o0,
+      minute: 00,
       timeZone: 1,
     });
 

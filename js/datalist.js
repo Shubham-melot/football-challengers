@@ -896,7 +896,7 @@ function getLuckyPlay(local) {
           $("#luckyImg").show();
           Swal.fire({
             html: luckyPlayRew.msg,
-            title: '<img src="./img/oof.png" class="w100" />',
+            title: '<img src="./img/Oops text.png" class="oops-text-img" />',
             allowOutsideClick: false,
             allowEscapeKey: false,
             showConfirmButton: false,
@@ -922,7 +922,7 @@ function getLuckyPlay(local) {
     //getLuckyPlayPopulate(luckyPlayRew);
     Swal.fire({
       html: "Please enter chances other than 0",
-      title: '<img src="./img/oof.png" class="w100" />',
+      title: '<img src="./img/Oops text.png" class="oops-text-img" />',
       allowOutsideClick: false,
       allowEscapeKey: false,
       showConfirmButton: false,
@@ -998,7 +998,7 @@ function getLuckyPlayPopulate(luckyPlayRew) {
     $("#playImg").attr("onClick", "getLuckyPlay(0);");
     Swal.fire({
       html: "Something went wrong.Please Try again later. Thanks.",
-      title: '<img src="./img/oof.png" class="w100" />',
+      title: '<img src="./img/Oops text.png" class="oops-text-img" />',
       showConfirmButton: false,
       allowOutsideClick: false,
       allowEscapeKey: false,
@@ -1231,21 +1231,21 @@ function teamRankPopulate(teamRankRec) {
         var teamName = "";
 
         if (teamPortraitIndex == 1) {
-          teamName = "Team warrior";
+          teamName = "Devil Defenders";
         } else if (teamPortraitIndex == 2) {
-          teamName = "Divine soldiers";
+          teamName = "Brave Blues";
         } else if (teamPortraitIndex == 3) {
-          teamName = " Striking Shadow";
+          teamName = "Golden Panthers";
         } else if (teamPortraitIndex == 4) {
-          teamName = "Galaxy Fighters";
+          teamName = "Real Rebels";
         } else if (teamPortraitIndex == 5) {
-          teamName = "United Enigma";
+          teamName = "Fiery Eagles";
         } else if (teamPortraitIndex == 6) {
-          teamName = "The turf's giants";
+          teamName = "Blue Sharks";
         } else if (teamPortraitIndex == 7) {
-          teamName = "Defender's Dream";
+          teamName = "Thundering Wizards";
         } else if (teamPortraitIndex == 8) {
-          teamName = "Barrier Breakers";
+          teamName = "Fierce Fighters";
         }
 
         var rec = "";
@@ -1349,6 +1349,7 @@ function getTeamRankWeekly(local) {
       },
     });
   } else {
+    console.log(teamRankRecWeekly);
     teamRankPopulateWeekly(teamRankRecWeekly);
   }
 }
@@ -2172,7 +2173,7 @@ function teamVote(local) {
   } else if (voteCount == 0 && voteText == 0) {
     Swal.fire({
       html: "<b>Please choose your favourite team to support and cheer them on with a goal! Thank you!</b>",
-      title: '<img src="./img/oof.png" class="w100" />',
+      title: '<img src="./img/Oops text.png" class="oops-text-img" />',
       showConfirmButton: false,
       allowOutsideClick: false,
       allowEscapeKey: false,
@@ -2193,7 +2194,7 @@ function teamVote(local) {
   } else if (voteCount < 0) {
     Swal.fire({
       html: " Points count cannot be less then zero",
-      title: '<img src="./img/oof.png" class="w100" />',
+      title: '<img src="./img/Oops text.png" class="oops-text-img" />',
       showConfirmButton: false,
       allowOutsideClick: false,
       allowEscapeKey: false,
@@ -2302,7 +2303,7 @@ function teamVotePopulate(teamVoteRec, teamIndex) {
   } else if (teamVoteRec.errorCode !== 0) {
     Swal.fire({
       html: "Please choose your favourite team to support and cheer them on with a goal! Thank you!",
-      title: '<img src="./img/oof.png" class="w100" />',
+      title: '<img src="./img/Oops text.png" class="oops-text-img" />',
       showConfirmButton: false,
       allowOutsideClick: false,
       allowEscapeKey: false,
@@ -2311,7 +2312,7 @@ function teamVotePopulate(teamVoteRec, teamIndex) {
   } else {
     Swal.fire({
       html: teamVoteRec.errorCode,
-      title: '<img src="./img/oof.png" class="w100" />',
+      title: '<img src="./img/Oops text.png" class="oops-text-img" />',
       showConfirmButton: false,
       allowOutsideClick: false,
       allowEscapeKey: false,
