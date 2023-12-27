@@ -819,3 +819,9 @@ function rankingLeaguePrev(typ) {
     console.log("type3: " + typ);
   }
 }
+
+const userVoteModalCloseBtn = document.querySelector("#closeVoteModal");
+const userVoteModal = document.querySelector("#userVoteModal");
+userVoteModalCloseBtn.addEventListener("click", () => {
+  userVoteModal.style.display = "none";
+});

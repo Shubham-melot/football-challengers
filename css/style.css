@@ -20,6 +20,12 @@ and open the template in the editor.
   font-weight: normal;
   src: local("TitanOne"), url("font/TitanOne-Regular.ttf") format("woff");
 }
+@font-face {
+  font-family: "HiJack";
+  font-style: normal;
+  font-weight: normal;
+  src: local("TitanOne"), url("font/Hi-Jack.otf") format("woff");
+}
 a {
   display: block;
   border: none !important;
@@ -674,16 +680,18 @@ body {
   order: 1;
 }
 .bg-talen {
-  width: 50%;
+  width: 69%;
+  min-height: 40px;
   grid-template-columns: 50% 50% !important;
+  align-items: center;
   grid-gap: 0% !important;
-  /* background: url('../img/talentBg.png') center/100% 100% no-repeat; */
+  background: url("../img/teamBtnbg.png") center/100% 100% no-repeat;
   /*color: transparent;*/
   padding: 0;
   margin: auto;
   margin-top: -2vw;
-  background: #013f01;
-  border-radius: 25vw;
+  /* background: #013f01; */
+  border-radius: 6px;
   color: white;
 }
 .btn-talen {
@@ -693,19 +701,21 @@ body {
   margin-bottom: -1vw;
   margin-top: -1vw;
   height: 12vw;
-  font-size: 4vw;
+  font-size: 3.5vw;
   color: white;
-  font-weight: bold;
+  font-weight: 800;
 }
 .active-talen {
-  /* background: url('../img/btnTalenBg.png') center/100% 100% no-repeat; */ /*text-indent: 111111px;*/
-  color: #004c00; /* padding: 2.3vw 0; */
-  font-weight: bold;
-  font-size: 4vw;
-  height: 8vw;
+  background: url("../img/teamStambg.png") center/100% 100% no-repeat; /*text-indent: 111111px;*/
+  color: #571c08; /* padding: 2.3vw 0; */
+  /* font-weight: bold; */
+  /* font-size: 4.vw; */
+  height: 100%;
   margin-top: 1vw;
-  background: #ffe000;
-  border-radius: 25vw;
+  /* background: #ffe000; */
+  border-radius: 6px;
+
+  transform: translateY(-4px) scale(1.05);
 }
 .btn-league {
   width: 75%;
@@ -1318,6 +1328,7 @@ animation-timing-function: linear;*/
   align-self: center;
   margin: 1vw 0 -6vw 14%;
   padding: 1vw 0;
+  position: relative;
 }
 .cong-text {
   font-size: 5vw;
@@ -2306,11 +2317,11 @@ u {
 }
 
 .main-timer-div {
-  width: fit-content;
+  /* width: fit-content; */
   display: block;
   margin: 0vw auto 4vw;
   /* background-color: #011132; */
-  /*background: url('../img/Count-down-bg.png') center/100% 100% no-repeat;*/
+  background: url("../img/Timer_bg.png") center/100% 70% no-repeat;
   border-radius: 0;
   text-align: center;
   /* color: #fff; */
@@ -2324,7 +2335,7 @@ u {
 .timer {
   width: 100%;
   text-align: center;
-  margin-bottom: 0px !important;
+  margin-bottom: 5vw !important;
   margin: auto;
   border-radius: 0px;
 }
@@ -2348,7 +2359,7 @@ u {
 }
 
 .timer .table-cell .tab-unit {
-  font-size: 0.5rem;
+  font-size: 0.45rem;
   padding-top: 10px;
   padding: 0px 0px;
   color: #ffffff !important;
@@ -2364,7 +2375,7 @@ u {
   border-radius: 35%;
 }
 .winnerhead img {
-  width: 60%;
+  width: 65%;
   display: block;
   margin: auto;
 }
@@ -3068,4 +3079,7 @@ th {
   width: 34%;
   margin-inline: auto;
   margin-top: 4px;
+}
+#userVoteModal .modal-content {
+  background: url("../img/Congo-popup-bg.png") center/100% 100% no-repeat;
 }
