@@ -1150,7 +1150,7 @@ and open the template in the editor.
       <div id="rewards" class="modal" style="display: none">
         <!-- Modal content -->
         <center>
-          <img src="img/Event-rewards-text.png" class="rewards-banner" />
+          <img src="img/rewards text.png" class="rewards-banner" />
         </center>
         <!--<div class="close" id="closeRewards"><img src="img/close.png" class="close_dialog_next" alt=""></div>-->
         <div style="clear: both"></div>
@@ -1165,7 +1165,7 @@ and open the template in the editor.
                   class="btn-talen active-talen"
                   onclick="rewardChange(event,1)"
                 >
-                  TEAM
+                  TEAM STAND
                 </button>
               </div>
               <div>
@@ -1179,14 +1179,14 @@ and open the template in the editor.
               </div>
             </div>
             <div id="UserRewards" class="reward-main-div1">
-              <div class="col-two">
+              <div style="width: 100%" class="col-two">
                 <div>
                   <button
                     class="btn-league active-league"
                     onclick="rewardsChange(1)"
                     id="OverallBtn"
                   >
-                    <img src="img/overallbtn.png" />
+                    <img src="img/Overall btn.png" />
                   </button>
                 </div>
                 <div>
@@ -1195,7 +1195,7 @@ and open the template in the editor.
                     onclick="rewardsChange(2)"
                     id="weeklyBtn"
                   >
-                    <img src="img/hourlybtn.png" />
+                    <img src="img/weekly btn.png" />
                   </button>
                 </div>
               </div>
@@ -1463,7 +1463,7 @@ and open the template in the editor.
                     onclick="rewardsChangeTalent(1)"
                     id="OverallBtnTalent"
                   >
-                    <img src="img/overallbtn.png" />
+                    <img src="img/Overall btn.png" />
                   </button>
                 </div>
                 <div>
@@ -1472,7 +1472,7 @@ and open the template in the editor.
                     onclick="rewardsChangeTalent(2)"
                     id="weeklyBtnTalent"
                   >
-                    <img src="img/hourlybtn.png" />
+                    <img src="img/weekly btn.png" />
                   </button>
                 </div>
               </div>
@@ -1698,21 +1698,28 @@ and open the template in the editor.
       <!-- vote success congrtulation  -->
       <div id="userVoteModal" class="modal" style="display: none">
         <!-- Modal content -->
-        <div class="close" id="closeVoteModal">
-          <img src="img/close.png" class="closetop2" alt="" />
-        </div>
         <div style="clear: both"></div>
-        <div class="modal-content">
-          <h4 class="cong-text" id="voteCongText">Hurrah !!</h4>
-          <!-- <p>
+        <div class="modal-content" style="background-position-x: 5vw">
+          <h4
+            style="margin-block: 10%; margin-top: 16%"
+            class="cong-text"
+            id="voteCongText"
+          >
+            Hurrah !!
+          </h4>
+          <p style="margin-bottom: 30%">
             Hey Supporter! <br />
             Thank you for appreciating _____ (team name). Hope you <br />
             team (team name) again.
             <br />
             <br />
             Keep supporting us till the very end and make us win this league.
-          </p> -->
+          </p>
           <p class="cong-vote-text" id="voteCpngText"></p>
+        </div>
+
+        <div class="close" id="closeVoteModal">
+          <img src="img/close.png" class="closetop2" alt="" />
         </div>
       </div>
       <!-- Modal Boxes End  -->
@@ -1815,9 +1822,9 @@ and open the template in the editor.
     var dd = today.getUTCDate();
 
     $("#simple_timer").syotimer({
-      year: 2023,
-      month: 11,
-      day: 2,
+      year: 2024,
+      month: 3,
+      day: 7,
       hour: 25,
       minute: 0o0,
       timeZone: 1,
