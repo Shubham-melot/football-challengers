@@ -2161,7 +2161,7 @@ function teamVote(local) {
   // alert('selected ');
   if (voteCount == 0 && voteText > 0) {
     Swal.fire({
-      html: "Please indicate the number of POINTS  you would like to see your favourite team score. Thank you!",
+      html: "Please indicate the number of Credits  you wish to score for your favourite. Thank you!",
       title: '<img src="./img/missing.png" class="wid-80" />',
       showConfirmButton: false,
       allowOutsideClick: false,
@@ -2172,7 +2172,7 @@ function teamVote(local) {
     // $("#teamVote").attr("disabled", false);
   } else if (voteCount == 0 && voteText == 0) {
     Swal.fire({
-      html: "<b>Please choose your favourite team to support and cheer them on with a goal! Thank you!</b>",
+      html: "<b>Please select your favourite team to send them Credits. Thank you!</b>",
       title: '<img src="./img/Oops text.png" class="oops-text-img" />',
       showConfirmButton: false,
       allowOutsideClick: false,
@@ -2183,7 +2183,7 @@ function teamVote(local) {
     // $("#teamVote").attr("disabled", false);
   } else if (voteCount > voteText) {
     Swal.fire({
-      html: "<b>We would love for you to support all these teams, but unfortunately, you have exhausted your chances. Please accept the event gifts and return to begin playing football again!</b>",
+      html: "<b>We would love to see you play, send the event gifts, and earn chances, score Credits, and then try sending.</b>",
       title: '<img src="./img/uhoh1.png" class="w100" />',
       showConfirmButton: false,
       allowOutsideClick: false,
@@ -2302,7 +2302,7 @@ function teamVotePopulate(teamVoteRec, teamIndex) {
     openVoteSuccessDialog();
   } else if (teamVoteRec.errorCode !== 0) {
     Swal.fire({
-      html: "Please choose your favourite team to support and cheer them on with a goal! Thank you!",
+      html: "Please select your favourite team to send them Credits. Thank you!",
       title: '<img src="./img/Oops text.png" class="oops-text-img" />',
       showConfirmButton: false,
       allowOutsideClick: false,
