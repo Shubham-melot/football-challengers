@@ -573,7 +573,7 @@ function webpageRec(local) {
     $.ajax({
       type: "GET",
       async: true,
-      url: host + "/api/activity/cricket/getUserEventInfo?userId=" + userId,
+      url: host + "/api/activity/football/getUserEventInfo?userId=" + userId,
       cache: false,
       error: function (xhr, ajaxOptions, thrownError) {
         // alert(xhr.responseText);
@@ -595,6 +595,7 @@ function webpageRec(local) {
       beforeSend: function () {},
       complete: function () {},
       success: function (data) {
+        console.log(data);
         webpageRecPopulate(data);
       },
       failure: function () {
@@ -625,15 +626,15 @@ function webpageRecPopulate(recDetails) {
       }, 700);
       isFlag = true;
     }
-    if (recDetails.data.userPoints != undefined) {
-      $("#chanceText").text(Math.floor(recDetails.data.userPoints / 25000));
+    if (recDetails.data.gamePoints != undefined) {
+      $("#chanceText").text(Math.floor(recDetails.data.gamePoints / 25000));
     }
-    if (recDetails.data.gameRuns != undefined) {
-      $("#voteText").text(recDetails.data.gameRuns);
+    if (recDetails.data.voteTickets != undefined) {
+      $("#voteText").text(recDetails.data.voteTickets);
     }
 
-    if (recDetails.data.totalBeanPot != undefined) {
-      $("#potOverallValue").html(recDetails.data.totalBeanPot);
+    if (recDetails.data.totalBeansPot != undefined) {
+      $("#potOverallValue").html(recDetails.data.totalBeansPot);
       // $('#potoveralltxt').show();
       // $('#potweeklytxt').hide();
     }
@@ -800,12 +801,13 @@ function getLuckyPlay(local) {
   $("#luckyImg").hide();
   // alert(chanceCount);
   if (local == 0 && chanceCount > 0) {
+    const url = `${host}/api/activity/football/playFootballGame`;
     $.ajax({
       type: "POST",
       async: true,
 
       headers: { token: "" + u_token + "", userId: "" + userId + "" },
-      url: host + "/api/activity/cricket/playFootballGame",
+      url,
       contentType: "application/json",
       data: JSON.stringify({
         userId: userId,
@@ -2203,11 +2205,12 @@ function teamVote(local) {
     $("#btnVoteMain").attr("disabled", false);
   } else if (voteCount > 0 && local == 0) {
     // alert(host+'/api/activity/league/userVoteTeam?voteCount='+voteCount+'&voteTeamIndex='+teamIndex);
+    const url = `${host}/api/activity/football/voteTeam`;
     $.ajax({
       type: "POST",
       async: true,
       headers: { token: "" + u_token + "", userId: "" + userId + "" },
-      url: host + "/api/activity/cricket/voteTeam",
+      url,
       contentType: "application/json",
       data: JSON.stringify({
         userId: userId,
@@ -4759,13 +4762,14 @@ function imgError(image) {
 }
 
 function getWinnerApi(local) {
+  // const url = host +
+  //       "/api/activity/eventShow/getModulePushRankV3?eventDesc=20230805_footballGlory&pageIndex=1&pageCount=10&rankIndex=3&rankType=2";
+  const url = `${host}/api/activity/eidF/getWinnerRankInfo?eventDesc=20240109_rps&rankIndex=1&pageNum=1&pageSize=10`;
   if (local == 0) {
     $.ajax({
       type: "GET",
       async: true,
-      url:
-        host +
-        "/api/activity/eventShow/getModulePushRankV3?eventDesc=20230805_footballGlory&pageIndex=1&pageCount=10&rankIndex=3&rankType=2",
+      url,
       cache: false,
       success: function (data) {
         // alert(JSON.stringify(data))
@@ -4781,7 +4785,7 @@ function getWinnerApi(local) {
 }
 
 function winnerPopulate(data) {
-  $.each(data, function (key, value) {
+  $.each(data.data.list, function (key, value) {
     $("#topmarq").append(createMarquee(value, key));
   });
 }
@@ -4807,7 +4811,7 @@ function createMarquee(data, index) {
 
     html +=
       '<span class="nametop">' +
-      data.nickName +
+      data.nickname +
       " in SK Football Glory </span>";
 
     html += "</div>";
