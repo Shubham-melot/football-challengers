@@ -573,7 +573,7 @@ function webpageRec(local) {
     $.ajax({
       type: "GET",
       async: true,
-      url: host + "/api/activity/cricket/getUserEventInfo?userId=" + userId,
+      url: host + "/api/activity/football/getUserEventInfo?userId=" + userId,
       cache: false,
       error: function (xhr, ajaxOptions, thrownError) {
         // alert(xhr.responseText);
@@ -595,6 +595,7 @@ function webpageRec(local) {
       beforeSend: function () {},
       complete: function () {},
       success: function (data) {
+        console.log(data);
         webpageRecPopulate(data);
       },
       failure: function () {
@@ -625,15 +626,15 @@ function webpageRecPopulate(recDetails) {
       }, 700);
       isFlag = true;
     }
-    if (recDetails.data.userPoints != undefined) {
-      $("#chanceText").text(Math.floor(recDetails.data.userPoints / 25000));
+    if (recDetails.data.gamePoints != undefined) {
+      $("#chanceText").text(Math.floor(recDetails.data.gamePoints / 25000));
     }
-    if (recDetails.data.gameRuns != undefined) {
-      $("#voteText").text(recDetails.data.gameRuns);
+    if (recDetails.data.voteTickets != undefined) {
+      $("#voteText").text(recDetails.data.voteTickets);
     }
 
-    if (recDetails.data.totalBeanPot != undefined) {
-      $("#potOverallValue").html(recDetails.data.totalBeanPot);
+    if (recDetails.data.totalBeansPot != undefined) {
+      $("#potOverallValue").html(recDetails.data.totalBeansPot);
       // $('#potoveralltxt').show();
       // $('#potweeklytxt').hide();
     }
@@ -800,12 +801,13 @@ function getLuckyPlay(local) {
   $("#luckyImg").hide();
   // alert(chanceCount);
   if (local == 0 && chanceCount > 0) {
+    const url = `${host}/api/activity/football/playFootballGame`;
     $.ajax({
       type: "POST",
       async: true,
 
       headers: { token: "" + u_token + "", userId: "" + userId + "" },
-      url: host + "/api/activity/cricket/playFootballGame",
+      url,
       contentType: "application/json",
       data: JSON.stringify({
         userId: userId,
@@ -2161,7 +2163,7 @@ function teamVote(local) {
   // alert('selected ');
   if (voteCount == 0 && voteText > 0) {
     Swal.fire({
-      html: "Please indicate the number of POINTS  you would like to see your favourite team score. Thank you!",
+      html: "Please indicate the number of Credits  you wish to score for your favourite. Thank you!",
       title: '<img src="./img/missing.png" class="wid-80" />',
       showConfirmButton: false,
       allowOutsideClick: false,
@@ -2172,7 +2174,7 @@ function teamVote(local) {
     // $("#teamVote").attr("disabled", false);
   } else if (voteCount == 0 && voteText == 0) {
     Swal.fire({
-      html: "<b>Please choose your favourite team to support and cheer them on with a goal! Thank you!</b>",
+      html: "<b>Please select your favourite team to send them Credits. Thank you!</b>",
       title: '<img src="./img/Oops text.png" class="oops-text-img" />',
       showConfirmButton: false,
       allowOutsideClick: false,
@@ -2183,7 +2185,7 @@ function teamVote(local) {
     // $("#teamVote").attr("disabled", false);
   } else if (voteCount > voteText) {
     Swal.fire({
-      html: "<b>We would love for you to support all these teams, but unfortunately, you have exhausted your chances. Please accept the event gifts and return to begin playing football again!</b>",
+      html: "<b>We would love to see you play, send the event gifts, and earn chances, score Credits, and then try sending.</b>",
       title: '<img src="./img/uhoh1.png" class="w100" />',
       showConfirmButton: false,
       allowOutsideClick: false,
@@ -2203,11 +2205,12 @@ function teamVote(local) {
     $("#btnVoteMain").attr("disabled", false);
   } else if (voteCount > 0 && local == 0) {
     // alert(host+'/api/activity/league/userVoteTeam?voteCount='+voteCount+'&voteTeamIndex='+teamIndex);
+    const url = `${host}/api/activity/football/voteTeam`;
     $.ajax({
       type: "POST",
       async: true,
       headers: { token: "" + u_token + "", userId: "" + userId + "" },
-      url: host + "/api/activity/cricket/voteTeam",
+      url,
       contentType: "application/json",
       data: JSON.stringify({
         userId: userId,
@@ -2302,7 +2305,7 @@ function teamVotePopulate(teamVoteRec, teamIndex) {
     openVoteSuccessDialog();
   } else if (teamVoteRec.errorCode !== 0) {
     Swal.fire({
-      html: "Please choose your favourite team to support and cheer them on with a goal! Thank you!",
+      html: "Please select your favourite team to send them Credits. Thank you!",
       title: '<img src="./img/Oops text.png" class="oops-text-img" />',
       showConfirmButton: false,
       allowOutsideClick: false,
@@ -4759,13 +4762,14 @@ function imgError(image) {
 }
 
 function getWinnerApi(local) {
+  // const url = host +
+  //       "/api/activity/eventShow/getModulePushRankV3?eventDesc=20230805_footballGlory&pageIndex=1&pageCount=10&rankIndex=3&rankType=2";
+  const url = `${host}/api/activity/eidF/getWinnerRankInfo?eventDesc=20240109_rps&rankIndex=1&pageNum=1&pageSize=10`;
   if (local == 0) {
     $.ajax({
       type: "GET",
       async: true,
-      url:
-        host +
-        "/api/activity/eventShow/getModulePushRankV3?eventDesc=20230805_footballGlory&pageIndex=1&pageCount=10&rankIndex=3&rankType=2",
+      url,
       cache: false,
       success: function (data) {
         // alert(JSON.stringify(data))
@@ -4781,7 +4785,7 @@ function getWinnerApi(local) {
 }
 
 function winnerPopulate(data) {
-  $.each(data, function (key, value) {
+  $.each(data.data.list, function (key, value) {
     $("#topmarq").append(createMarquee(value, key));
   });
 }
@@ -4807,7 +4811,7 @@ function createMarquee(data, index) {
 
     html +=
       '<span class="nametop">' +
-      data.nickName +
+      data.nickname +
       " in SK Football Glory </span>";
 
     html += "</div>";

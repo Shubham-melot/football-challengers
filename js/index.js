@@ -73,7 +73,7 @@ var userId = 0;
 var u_token = "";
 var playtime;
 var prevIndex;
-var local = 1;
+var local = 0;
 var weeklyIndex;
 var isFlag = false;
 var today = new Date();
@@ -84,10 +84,10 @@ $(document).ready(function () {
   var uri = "params[]";
   teamIndex = 1;
   weeklyIndex = 1;
-  // uid=502184262;
-  // userId=502184262;
-  // u_token= 'A11AA5140F6A2E461FBF72A51BDE9EED6A';
-  //queryData();
+  uid = 502184262;
+  userId = 502184262;
+  u_token = "A11AA5140F6A2E461FBF72A51BDE9EED6A";
+  queryData();
 
   // console.log( host+'/api/activity/eventShow/getEventCommonRank?eventDesc=20200919_league&rankType=1&userType=1&pageIndex=1&pageCount=20&'+encodeURIComponent(uri)+'='+teamIndex+'&'+encodeURIComponent(uri)+'='+weeklyIndex);
   //openVoteSuccessDialog();
