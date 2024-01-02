@@ -611,8 +611,8 @@ function webpageRecPopulate(recDetails) {
 
   if (recDetails.errorCode == 0) {
     $("#weeklyIndex").val(recDetails.data.weekIndex);
-    weeklyIndex = recDetails.data.weekIndex;
-    prevIndex = recDetails.data.weekIndex - 1;
+    const weeklyIndex = recDetails.data.weekIndex;
+    const prevIndex = recDetails.data.weekIndex - 1;
     get_talent_recWeekly(local);
     get_talent_recWeeklyPrevious(local);
     if (isFlag == false) {
@@ -640,42 +640,14 @@ function webpageRecPopulate(recDetails) {
     }
     if (recDetails.data.weekIndex != undefined) {
       $("#weeklyIndex").val(recDetails.data.weekIndex);
-    }
-    if (recDetails.data.weekBeanPotList != undefined) {
-      for (var i = 0; i < recDetails.data.weekBeanPotList.length; i++) {
-        console.log(
-          "tgis week inde" + recDetails.data.weekBeanPotList[i].weekIndex
-        );
+      if (recDetails.data.weeklyBeansPot != undefined) {
+        const { weeklyBeansPot, weekIndex } = recDetails.data;
 
-        console.log(
-          "previous week index" +
-            parseInt(recDetails.data.weekBeanPotList[i].weekIndex - 1)
-        );
+        console.log("tgis week inde" + weekIndex);
+        console.log("previous week index" + parseInt(prevIndex));
 
-        if (
-          recDetails.data.weekBeanPotList[i].weekIndex ==
-          recDetails.data.weekIndex
-        ) {
-          $("#potWeeklyValue").html(
-            recDetails.data.weekBeanPotList[i].weekBeanPot
-          );
-          $("#potWeeklyValuePrevious").html(
-            recDetails.data.weekBeanPotList[i - 1].weekBeanPot
-          );
-          //      $('#potoveralltxt').hide();
-          // $('#potweeklytxt').show();
-        }
-
-        if (
-          parseInt(recDetails.data.weekBeanPotList[i].weekIndex) - 1 ==
-          parseInt(recDetails.data.weekIndex) - 1
-        ) {
-          $("#potWeeklyValuePrevious").html(
-            recDetails.data.weekBeanPotList[i - 1].weekBeanPot
-          );
-          //      $('#potoveralltxt').hide();
-          // $('#potweeklytxt').show();
-        }
+        $("#potWeeklyValue").html(weeklyBeansPot[weekIndex]);
+        $("#potWeeklyValuePrevious").html(weeklyBeansPot[prevIndex]);
       }
     }
 
