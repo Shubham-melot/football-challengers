@@ -657,7 +657,6 @@ function webpageRecPopulate(recDetails) {
 
     // if (recDetails.data.myRewardList != undefined) {
     //   if(recDetails.data.myRewardList.length == 1) {
-    //     $('#myRewards').removeClass('col-two');
     //     $('#myRewards').removeClass('col-three');
     //     $('#myRewards').addClass('col-one');
     //   }else if(recDetails.data.myRewardList.length == 2) {
@@ -853,9 +852,9 @@ function getLuckyPlay(local) {
           $("#luckyGifStart").hide();
           $("#luckyImg").show();
           Swal.fire({
-            html: "<b>Greetings! You are on the verge of starting to score and winning beans rewards, with just  more  beans to spend. We are eagerly awaiting your participation and can't wait to observe your gameplay. Join us promptly!</b>",
+            html: "<b>Greetings! You can start scoring and winning Beans rewards, by spending 25k Beans on the event gifts. We're eagerly awaiting your participation, Join us soon!",
             title:
-              '<div class="nodata"><img src="./img/tryagain.png" class="w100" /></div>',
+              '<div class="nodata"><img src="./img/try-again.png" style="width:60%;margin-top:3%" /></div>',
             allowOutsideClick: false,
             allowEscapeKey: false,
             showConfirmButton: false,
@@ -2135,8 +2134,9 @@ function teamVote(local) {
   // alert('selected ');
   if (voteCount == 0 && voteText > 0) {
     Swal.fire({
-      html: "Please indicate the number of Credits  you wish to score for your favourite. Thank you!",
-      title: '<img src="./img/missing.png" class="wid-80" />',
+      html: "Please indicate the number of Credits you wish to score for your favourite. Thank you!",
+      title:
+        '<img src="./img/You-are-missing-it.png" style="margin-top:3%;" class="wid-80" />',
       showConfirmButton: false,
       allowOutsideClick: false,
       allowEscapeKey: false,
@@ -2158,7 +2158,8 @@ function teamVote(local) {
   } else if (voteCount > voteText) {
     Swal.fire({
       html: "<b>We would love to see you play, send the event gifts, and earn chances, score Credits, and then try sending.</b>",
-      title: '<img src="./img/uhoh1.png" class="w100" />',
+      title:
+        '<img src="./img/uh-oh.png" style="width: 40%; margin-top: 3%; margin-inline: auto" />',
       showConfirmButton: false,
       allowOutsideClick: false,
       allowEscapeKey: false,
@@ -2266,11 +2267,11 @@ function teamVotePopulate(teamVoteRec, teamIndex) {
     // console.log('teamName: '+ teamName);
     var congText =
       team_img +
-      ' Hey Supporter! We appreciate your appreciation for  <span class="sBeans">' +
+      " Hey Supporter! <br /> Thank you for appreciating " +
       teamName +
-      "</span>. It would be great to have your support again for our  " +
+      "</span>. <br />Hope you support our " +
       teamName +
-      " again.<br> Make us win this league by supporting us until the very end.";
+      " again.<br /> <br />Keep supporting us till the very end and make us win this league.";
 
     $("#voteCpngText").html(congText);
     $("#noVoteText").val(0);
@@ -4776,16 +4777,12 @@ function createMarquee(data, index) {
     html += "</button>";
     html += "</div>";
     html += '<div class="mt1">';
-
+    html += '<span class="nametop">' + data.nickname + "</span>";
+    html += '<span class="nametop"> has won </span>';
     html += '<span class="nametop">' + data.userScore + " beans </span>";
     html += '<img src="../rewards/beanbag.png"  class="wv7 vmiddle " />';
-    html += '<span class="nametop"> have been claimed by </span>';
 
-    html +=
-      '<span class="nametop">' +
-      data.nickname +
-      " in SK Football Glory </span>";
-
+    html += '<span class="nametop"> in Football Challengers event </span>';
     html += "</div>";
 
     html += "</div>";
